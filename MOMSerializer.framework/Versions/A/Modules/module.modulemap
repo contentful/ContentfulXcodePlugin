@@ -1,0 +1,10 @@
+framework module MOMSerializer {
+  umbrella header "MOMSerializer.h"
+
+  export *
+  module * { export * }
+}
+
+module MOMSerializer.Swift {
+    header "MOMSerializer-Swift.h"
+}
