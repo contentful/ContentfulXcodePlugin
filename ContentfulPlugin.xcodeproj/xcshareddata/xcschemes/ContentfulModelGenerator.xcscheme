@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1DB6A731A10DDAC00F6E5C5"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
+               BlueprintIdentifier = "A1604E1B1A14DC1B003F916D"
+               BuildableName = "ContentfulModelGenerator"
+               BlueprintName = "ContentfulModelGenerator"
                ReferencedContainer = "container:ContentfulPlugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,23 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1DB6A731A10DDAC00F6E5C5"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
-               ReferencedContainer = "container:ContentfulPlugin.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1604DE61A13AF58003F916D"
-            BuildableName = "TestHost"
-            BlueprintName = "TestHost"
+            BlueprintIdentifier = "A1604E1B1A14DC1B003F916D"
+            BuildableName = "ContentfulModelGenerator"
+            BlueprintName = "ContentfulModelGenerator"
             ReferencedContainer = "container:ContentfulPlugin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1604DE61A13AF58003F916D"
-            BuildableName = "TestHost"
-            BlueprintName = "TestHost"
+            BlueprintIdentifier = "A1604E1B1A14DC1B003F916D"
+            BuildableName = "ContentfulModelGenerator"
+            BlueprintName = "ContentfulModelGenerator"
             ReferencedContainer = "container:ContentfulPlugin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -76,6 +66,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A1604E1B1A14DC1B003F916D"
+            BuildableName = "ContentfulModelGenerator"
+            BlueprintName = "ContentfulModelGenerator"
+            ReferencedContainer = "container:ContentfulPlugin.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

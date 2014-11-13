@@ -1,0 +1,6 @@
+[submodule "vendor/ManagedObjectModelSerializer"]
+	path = vendor/ManagedObjectModelSerializer
+	url = git@github.com:contentful/ManagedObjectModelSerializer.git
+[submodule "vendor/CLIKit"]
+	path = vendor/CLIKit
+	url = git@github.com:kylef/CLIKit.git

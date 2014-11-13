@@ -7,23 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1604DD91A136B13003F916D /* ContentfulModelGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */; };
-		A1604DDC1A13706D003F916D /* ContentfulDeliveryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */; };
-		A1604DDF1A137085003F916D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
-		A1604DF01A13B04B003F916D /* ContentfulDeliveryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */; };
+		A1604E1F1A14DC1B003F916D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E1E1A14DC1B003F916D /* main.swift */; };
+		A1604E271A14EE37003F916D /* EntitySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E241A14EE37003F916D /* EntitySerializer.swift */; };
+		A1604E281A14EE37003F916D /* ModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E251A14EE37003F916D /* ModelSerializer.swift */; };
+		A1604E291A14EE37003F916D /* XMLTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E261A14EE37003F916D /* XMLTools.swift */; };
+		A1604E2E1A14EE4C003F916D /* ECoXiS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E2A1A14EE4C003F916D /* ECoXiS.swift */; };
+		A1604E2F1A14EE4C003F916D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E2B1A14EE4C003F916D /* Model.swift */; };
+		A1604E301A14EE4C003F916D /* StringCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E2C1A14EE4C003F916D /* StringCreation.swift */; };
+		A1604E311A14EE4C003F916D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E2D1A14EE4C003F916D /* Utilities.swift */; };
+		A1604E371A14EE60003F916D /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E321A14EE60003F916D /* Command.swift */; };
+		A1604E381A14EE60003F916D /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E331A14EE60003F916D /* FileHandle.swift */; };
+		A1604E391A14EE60003F916D /* Pipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E341A14EE60003F916D /* Pipes.swift */; };
+		A1604E3A1A14EE60003F916D /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E351A14EE60003F916D /* Stream.swift */; };
+		A1604E3B1A14EE60003F916D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E361A14EE60003F916D /* String.swift */; };
+		A1604E3C1A14EF1B003F916D /* ContentfulModelGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */; };
+		A1604E3D1A14EF2E003F916D /* ContentfulDeliveryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */; };
+		A1604E441A14FD1D003F916D /* ARGV.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E401A14FD1D003F916D /* ARGV.swift */; };
+		A1604E451A14FD1D003F916D /* FooCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E411A14FD1D003F916D /* FooCommand.swift */; };
+		A1604E461A14FD1D003F916D /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E421A14FD1D003F916D /* HelpCommand.swift */; };
+		A1604E471A14FD1D003F916D /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E431A14FD1D003F916D /* Manager.swift */; };
+		A1604E481A15027C003F916D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
 		A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */; };
 		A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */; };
 		A1DB6A5A1A10CE9500F6E5C5 /* ContentfulPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A591A10CE9500F6E5C5 /* ContentfulPlugin.m */; };
 		A1DB6A6E1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A6C1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m */; };
 		A1DB6A6F1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DB6A6D1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib */; };
-		A1DB6A791A10DDAC00F6E5C5 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A781A10DDAC00F6E5C5 /* Tests.m */; };
-		A1DB6A7F1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A1604E1A1A14DC1B003F916D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		A1604DDA1A136F7E003F916D /* AsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncTesting.h; sourceTree = "<group>"; };
 		A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContentfulDeliveryAPI.framework; sourceTree = "<group>"; };
 		A1604DDE1A137085003F916D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A1604E1C1A14DC1B003F916D /* ContentfulModelGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ContentfulModelGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1604E1E1A14DC1B003F916D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A1604E241A14EE37003F916D /* EntitySerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntitySerializer.swift; path = ../../vendor/ManagedObjectModelSerializer/Code/EntitySerializer.swift; sourceTree = "<group>"; };
+		A1604E251A14EE37003F916D /* ModelSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelSerializer.swift; path = ../../vendor/ManagedObjectModelSerializer/Code/ModelSerializer.swift; sourceTree = "<group>"; };
+		A1604E261A14EE37003F916D /* XMLTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLTools.swift; path = ../../vendor/ManagedObjectModelSerializer/Code/XMLTools.swift; sourceTree = "<group>"; };
+		A1604E2A1A14EE4C003F916D /* ECoXiS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ECoXiS.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/ECoXiS.swift; sourceTree = "<group>"; };
+		A1604E2B1A14EE4C003F916D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/Model.swift; sourceTree = "<group>"; };
+		A1604E2C1A14EE4C003F916D /* StringCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringCreation.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/StringCreation.swift; sourceTree = "<group>"; };
+		A1604E2D1A14EE4C003F916D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/Utilities.swift; sourceTree = "<group>"; };
+		A1604E321A14EE60003F916D /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/Command.swift; sourceTree = "<group>"; };
+		A1604E331A14EE60003F916D /* FileHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHandle.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/FileHandle.swift; sourceTree = "<group>"; };
+		A1604E341A14EE60003F916D /* Pipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pipes.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/Pipes.swift; sourceTree = "<group>"; };
+		A1604E351A14EE60003F916D /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/Stream.swift; sourceTree = "<group>"; };
+		A1604E361A14EE60003F916D /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/String.swift; sourceTree = "<group>"; };
+		A1604E3E1A14FB51003F916D /* ContentfulModelGenerator-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContentfulModelGenerator-Bridge.h"; sourceTree = "<group>"; };
+		A1604E401A14FD1D003F916D /* ARGV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARGV.swift; path = vendor/CLIKit/CLIKit/ARGV.swift; sourceTree = SOURCE_ROOT; };
+		A1604E411A14FD1D003F916D /* FooCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FooCommand.swift; path = vendor/CLIKit/CLIKit/FooCommand.swift; sourceTree = SOURCE_ROOT; };
+		A1604E421A14FD1D003F916D /* HelpCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpCommand.swift; path = vendor/CLIKit/CLIKit/HelpCommand.swift; sourceTree = SOURCE_ROOT; };
+		A1604E431A14FD1D003F916D /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = vendor/CLIKit/CLIKit/Manager.swift; sourceTree = SOURCE_ROOT; };
 		A1DB6A4C1A10CE9500F6E5C5 /* ContentfulPlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContentfulPlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -33,36 +77,62 @@
 		A1DB6A6B1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTypeSelectionDialog.h; sourceTree = "<group>"; };
 		A1DB6A6C1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTypeSelectionDialog.m; sourceTree = "<group>"; };
 		A1DB6A6D1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentTypeSelectionDialog.xib; sourceTree = "<group>"; };
-		A1DB6A741A10DDAC00F6E5C5 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1DB6A771A10DDAC00F6E5C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1DB6A781A10DDAC00F6E5C5 /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		A1DB6A7D1A10DE0E00F6E5C5 /* ContentfulModelGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentfulModelGenerator.h; sourceTree = "<group>"; };
 		A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentfulModelGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A1604E191A14DC1B003F916D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1604E481A15027C003F916D /* SystemConfiguration.framework in Frameworks */,
+				A1604E3D1A14EF2E003F916D /* ContentfulDeliveryAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1DB6A4A1A10CE9500F6E5C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1604DDC1A13706D003F916D /* ContentfulDeliveryAPI.framework in Frameworks */,
 				A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */,
 				A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1DB6A711A10DDAC00F6E5C5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1604DDF1A137085003F916D /* SystemConfiguration.framework in Frameworks */,
-				A1604DF01A13B04B003F916D /* ContentfulDeliveryAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1604E231A14EE1E003F916D /* MOMSerializer */ = {
+			isa = PBXGroup;
+			children = (
+				A1604E321A14EE60003F916D /* Command.swift */,
+				A1604E2A1A14EE4C003F916D /* ECoXiS.swift */,
+				A1604E241A14EE37003F916D /* EntitySerializer.swift */,
+				A1604E331A14EE60003F916D /* FileHandle.swift */,
+				A1604E2B1A14EE4C003F916D /* Model.swift */,
+				A1604E251A14EE37003F916D /* ModelSerializer.swift */,
+				A1604E341A14EE60003F916D /* Pipes.swift */,
+				A1604E351A14EE60003F916D /* Stream.swift */,
+				A1604E361A14EE60003F916D /* String.swift */,
+				A1604E2C1A14EE4C003F916D /* StringCreation.swift */,
+				A1604E2D1A14EE4C003F916D /* Utilities.swift */,
+				A1604E261A14EE37003F916D /* XMLTools.swift */,
+			);
+			path = MOMSerializer;
+			sourceTree = "<group>";
+		};
+		A1604E3F1A14FD0A003F916D /* CLIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A1604E401A14FD1D003F916D /* ARGV.swift */,
+				A1604E411A14FD1D003F916D /* FooCommand.swift */,
+				A1604E421A14FD1D003F916D /* HelpCommand.swift */,
+				A1604E431A14FD1D003F916D /* Manager.swift */,
+			);
+			name = CLIKit;
+			sourceTree = "<group>";
+		};
 		A1DB6A431A10CE9500F6E5C5 = {
 			isa = PBXGroup;
 			children = (
@@ -71,7 +141,6 @@
 				A1DB6A4D1A10CE9500F6E5C5 /* Products */,
 				A1DB6A621A10D87000F6E5C5 /* Resources */,
 				A1DB6A541A10CE9500F6E5C5 /* Supporting Files */,
-				A1DB6A751A10DDAC00F6E5C5 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				A1DB6A4C1A10CE9500F6E5C5 /* ContentfulPlugin.xcplugin */,
-				A1DB6A741A10DDAC00F6E5C5 /* Tests.xctest */,
+				A1604E1C1A14DC1B003F916D /* ContentfulModelGenerator */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,12 +167,16 @@
 		A1DB6A531A10CE9500F6E5C5 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				A1604E3F1A14FD0A003F916D /* CLIKit */,
+				A1604E231A14EE1E003F916D /* MOMSerializer */,
+				A1604E3E1A14FB51003F916D /* ContentfulModelGenerator-Bridge.h */,
 				A1DB6A7D1A10DE0E00F6E5C5 /* ContentfulModelGenerator.h */,
 				A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */,
 				A1DB6A581A10CE9500F6E5C5 /* ContentfulPlugin.h */,
 				A1DB6A591A10CE9500F6E5C5 /* ContentfulPlugin.m */,
 				A1DB6A6B1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.h */,
 				A1DB6A6C1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m */,
+				A1604E1E1A14DC1B003F916D /* main.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -124,19 +197,26 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A1DB6A751A10DDAC00F6E5C5 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				A1604DDA1A136F7E003F916D /* AsyncTesting.h */,
-				A1DB6A781A10DDAC00F6E5C5 /* Tests.m */,
-				A1DB6A771A10DDAC00F6E5C5 /* Info.plist */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A1604E1B1A14DC1B003F916D /* ContentfulModelGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1604E221A14DC1B003F916D /* Build configuration list for PBXNativeTarget "ContentfulModelGenerator" */;
+			buildPhases = (
+				A1604E181A14DC1B003F916D /* Sources */,
+				A1604E191A14DC1B003F916D /* Frameworks */,
+				A1604E1A1A14DC1B003F916D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContentfulModelGenerator;
+			productName = ContentfulModelGenerator;
+			productReference = A1604E1C1A14DC1B003F916D /* ContentfulModelGenerator */;
+			productType = "com.apple.product-type.tool";
+		};
 		A1DB6A4B1A10CE9500F6E5C5 /* ContentfulPlugin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1DB6A5D1A10CE9500F6E5C5 /* Build configuration list for PBXNativeTarget "ContentfulPlugin" */;
@@ -154,23 +234,6 @@
 			productReference = A1DB6A4C1A10CE9500F6E5C5 /* ContentfulPlugin.xcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
-		A1DB6A731A10DDAC00F6E5C5 /* Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A1DB6A7A1A10DDAC00F6E5C5 /* Build configuration list for PBXNativeTarget "Tests" */;
-			buildPhases = (
-				A1DB6A701A10DDAC00F6E5C5 /* Sources */,
-				A1DB6A711A10DDAC00F6E5C5 /* Frameworks */,
-				A1DB6A721A10DDAC00F6E5C5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Tests;
-			productName = Tests;
-			productReference = A1DB6A741A10DDAC00F6E5C5 /* Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,10 +243,10 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Contentful GmbH";
 				TargetAttributes = {
-					A1DB6A4B1A10CE9500F6E5C5 = {
+					A1604E1B1A14DC1B003F916D = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					A1DB6A731A10DDAC00F6E5C5 = {
+					A1DB6A4B1A10CE9500F6E5C5 = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -200,8 +263,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				A1604E1B1A14DC1B003F916D /* ContentfulModelGenerator */,
 				A1DB6A4B1A10CE9500F6E5C5 /* ContentfulPlugin */,
-				A1DB6A731A10DDAC00F6E5C5 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,38 +278,80 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1DB6A721A10DDAC00F6E5C5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A1604E181A14DC1B003F916D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1604E281A14EE37003F916D /* ModelSerializer.swift in Sources */,
+				A1604E3B1A14EE60003F916D /* String.swift in Sources */,
+				A1604E271A14EE37003F916D /* EntitySerializer.swift in Sources */,
+				A1604E1F1A14DC1B003F916D /* main.swift in Sources */,
+				A1604E2F1A14EE4C003F916D /* Model.swift in Sources */,
+				A1604E3C1A14EF1B003F916D /* ContentfulModelGenerator.m in Sources */,
+				A1604E461A14FD1D003F916D /* HelpCommand.swift in Sources */,
+				A1604E471A14FD1D003F916D /* Manager.swift in Sources */,
+				A1604E2E1A14EE4C003F916D /* ECoXiS.swift in Sources */,
+				A1604E451A14FD1D003F916D /* FooCommand.swift in Sources */,
+				A1604E371A14EE60003F916D /* Command.swift in Sources */,
+				A1604E301A14EE4C003F916D /* StringCreation.swift in Sources */,
+				A1604E3A1A14EE60003F916D /* Stream.swift in Sources */,
+				A1604E441A14FD1D003F916D /* ARGV.swift in Sources */,
+				A1604E381A14EE60003F916D /* FileHandle.swift in Sources */,
+				A1604E391A14EE60003F916D /* Pipes.swift in Sources */,
+				A1604E311A14EE4C003F916D /* Utilities.swift in Sources */,
+				A1604E291A14EE37003F916D /* XMLTools.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1DB6A481A10CE9500F6E5C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A1DB6A6E1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m in Sources */,
-				A1DB6A7F1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m in Sources */,
 				A1DB6A5A1A10CE9500F6E5C5 /* ContentfulPlugin.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1DB6A701A10DDAC00F6E5C5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1DB6A791A10DDAC00F6E5C5 /* Tests.m in Sources */,
-				A1604DD91A136B13003F916D /* ContentfulModelGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		A1604E201A14DC1B003F916D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Code/ContentfulModelGenerator-Bridge.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1604E211A14DC1B003F916D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Code/ContentfulModelGenerator-Bridge.h";
+			};
+			name = Release;
+		};
 		A1DB6A5B1A10CE9500F6E5C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -352,52 +457,18 @@
 			};
 			name = Release;
 		};
-		A1DB6A7B1A10DDAC00F6E5C5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		A1DB6A7C1A10DDAC00F6E5C5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A1604E221A14DC1B003F916D /* Build configuration list for PBXNativeTarget "ContentfulModelGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1604E201A14DC1B003F916D /* Debug */,
+				A1604E211A14DC1B003F916D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A1DB6A471A10CE9500F6E5C5 /* Build configuration list for PBXProject "ContentfulPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -412,15 +483,6 @@
 			buildConfigurations = (
 				A1DB6A5E1A10CE9500F6E5C5 /* Debug */,
 				A1DB6A5F1A10CE9500F6E5C5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A1DB6A7A1A10DDAC00F6E5C5 /* Build configuration list for PBXNativeTarget "Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A1DB6A7B1A10DDAC00F6E5C5 /* Debug */,
-				A1DB6A7C1A10DDAC00F6E5C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
