@@ -10,7 +10,6 @@
 		A1604DD91A136B13003F916D /* ContentfulModelGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */; };
 		A1604DDC1A13706D003F916D /* ContentfulDeliveryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */; };
 		A1604DDF1A137085003F916D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
-		A1604DE11A1373F1003F916D /* MOMSerializer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DE01A1373F1003F916D /* MOMSerializer.framework */; };
 		A1604DF01A13B04B003F916D /* ContentfulDeliveryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */; };
 		A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */; };
 		A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */; };
@@ -25,7 +24,6 @@
 		A1604DDA1A136F7E003F916D /* AsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncTesting.h; sourceTree = "<group>"; };
 		A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContentfulDeliveryAPI.framework; sourceTree = "<group>"; };
 		A1604DDE1A137085003F916D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		A1604DE01A1373F1003F916D /* MOMSerializer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOMSerializer.framework; sourceTree = "<group>"; };
 		A1DB6A4C1A10CE9500F6E5C5 /* ContentfulPlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContentfulPlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -49,7 +47,6 @@
 			files = (
 				A1604DDC1A13706D003F916D /* ContentfulDeliveryAPI.framework in Frameworks */,
 				A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */,
-				A1604DE11A1373F1003F916D /* MOMSerializer.framework in Frameworks */,
 				A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,7 +90,6 @@
 				A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */,
 				A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */,
 				A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */,
-				A1604DE01A1373F1003F916D /* MOMSerializer.framework */,
 				A1604DDE1A137085003F916D /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
