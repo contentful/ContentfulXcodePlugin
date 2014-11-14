@@ -70,22 +70,74 @@
 -(NSEntityDescription*)generateEntityForContentType:(CDAContentType*)contentType {
     NSEntityDescription* entity = [[self class] entityWithName:contentType.name];
 
+    NSMutableArray* properties = [@[] mutableCopy];
+
     for (CDAField* field in contentType.fields) {
         if (field.disabled) {
             continue;
         }
 
         switch (field.type) {
-            case CDAFieldTypeLink:
+            case CDAFieldTypeArray:
+            case CDAFieldTypeLink: {
+                NSRelationshipDescription* relation = [NSRelationshipDescription new];
+                relation.name = field.identifier;
+                relation.optional = YES;
+                //relation.destinationEntity = nil;
+
+                [properties addObject:relation];
                 break;
+            }
             case CDAFieldTypeNone:
                 continue;
             default: {
+                NSAttributeDescription* attribute = [[self class] attributeWithName:field.identifier type:[[self class] attributeTypeFromFieldType:field.type]];
+
+                [properties addObject:attribute];
                 break;
             }
         }
     }
 
+    [properties addObject:[[self class] attributeWithName:@"identifier" type:NSStringAttributeType]];
+    
+    entity.properties = properties;
+    return entity;
+}
+
+-(NSEntityDescription*)generateStandardEntityForAssets {
+    NSEntityDescription* entity = [[self class] entityWithName:@"Asset"];
+
+    NSMutableArray* properties = [@[] mutableCopy];
+
+    NSAttributeDescription* attribute = [[self class] attributeWithName:@"height" type:NSFloatAttributeType];
+    [properties addObject:attribute];
+
+    attribute = [[self class] attributeWithName:@"width" type:NSFloatAttributeType];
+    [properties addObject:attribute];
+
+    for (NSString* attributeName in @[ @"identifier", @"internetMediaType", @"url" ]) {
+        attribute = [[self class] attributeWithName:attributeName type:NSStringAttributeType];
+        [properties addObject:attribute];
+    }
+
+    entity.properties = properties;
+    return entity;
+}
+
+-(NSEntityDescription*)generateStandardEntityForSyncInfo {
+    NSEntityDescription* entity = [[self class] entityWithName:@"SyncInfo"];
+
+    NSMutableArray* properties = [@[] mutableCopy];
+
+    NSAttributeDescription* attribute = [[self class] attributeWithName:@"lastSyncTimestamp"
+                                                                   type:NSDateAttributeType];
+    [properties addObject:attribute];
+
+    attribute = [[self class] attributeWithName:@"syncToken" type:NSStringAttributeType];
+    [properties addObject:attribute];
+
+    entity.properties = properties;
     return entity;
 }
 
@@ -99,6 +151,9 @@
             NSEntityDescription* entity = [self generateEntityForContentType:contentType];
             [entities addObject:entity];
         }
+
+        [entities addObject:[self generateStandardEntityForAssets]];
+        [entities addObject:[self generateStandardEntityForSyncInfo]];
 
         NSManagedObjectModel* model = [NSManagedObjectModel new];
         model.entities = [entities copy];
