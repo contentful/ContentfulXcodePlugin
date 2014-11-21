@@ -23,10 +23,10 @@
 		A1604E3B1A14EE60003F916D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E361A14EE60003F916D /* String.swift */; };
 		A1604E3C1A14EF1B003F916D /* ContentfulModelGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */; };
 		A1604E441A14FD1D003F916D /* ARGV.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E401A14FD1D003F916D /* ARGV.swift */; };
-		A1604E451A14FD1D003F916D /* FooCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E411A14FD1D003F916D /* FooCommand.swift */; };
 		A1604E461A14FD1D003F916D /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E421A14FD1D003F916D /* HelpCommand.swift */; };
 		A1604E471A14FD1D003F916D /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E431A14FD1D003F916D /* Manager.swift */; };
 		A1604E481A15027C003F916D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
+		A1D7A9FB1A1F7F6600C00299 /* Command_.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7A9FA1A1F7F6600C00299 /* Command_.swift */; };
 		A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */; };
 		A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */; };
 		A1DB6A5A1A10CE9500F6E5C5 /* ContentfulPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A591A10CE9500F6E5C5 /* ContentfulPlugin.m */; };
@@ -66,9 +66,9 @@
 		A1604E361A14EE60003F916D /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/String.swift; sourceTree = "<group>"; };
 		A1604E3E1A14FB51003F916D /* ContentfulModelGenerator-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContentfulModelGenerator-Bridge.h"; sourceTree = "<group>"; };
 		A1604E401A14FD1D003F916D /* ARGV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARGV.swift; path = vendor/CLIKit/CLIKit/ARGV.swift; sourceTree = SOURCE_ROOT; };
-		A1604E411A14FD1D003F916D /* FooCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FooCommand.swift; path = vendor/CLIKit/CLIKit/FooCommand.swift; sourceTree = SOURCE_ROOT; };
 		A1604E421A14FD1D003F916D /* HelpCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpCommand.swift; path = vendor/CLIKit/CLIKit/HelpCommand.swift; sourceTree = SOURCE_ROOT; };
 		A1604E431A14FD1D003F916D /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = vendor/CLIKit/CLIKit/Manager.swift; sourceTree = SOURCE_ROOT; };
+		A1D7A9FA1A1F7F6600C00299 /* Command_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command_.swift; sourceTree = "<group>"; };
 		A1DB6A4C1A10CE9500F6E5C5 /* ContentfulPlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContentfulPlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A1604E401A14FD1D003F916D /* ARGV.swift */,
-				A1604E411A14FD1D003F916D /* FooCommand.swift */,
+				A1D7A9FA1A1F7F6600C00299 /* Command_.swift */,
 				A1604E421A14FD1D003F916D /* HelpCommand.swift */,
 				A1604E431A14FD1D003F916D /* Manager.swift */,
 			);
@@ -333,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1604E281A14EE37003F916D /* ModelSerializer.swift in Sources */,
+				A1D7A9FB1A1F7F6600C00299 /* Command_.swift in Sources */,
 				A1604E3B1A14EE60003F916D /* String.swift in Sources */,
 				A1604E271A14EE37003F916D /* EntitySerializer.swift in Sources */,
 				A1604E1F1A14DC1B003F916D /* main.swift in Sources */,
@@ -341,7 +342,6 @@
 				A1604E461A14FD1D003F916D /* HelpCommand.swift in Sources */,
 				A1604E471A14FD1D003F916D /* Manager.swift in Sources */,
 				A1604E2E1A14EE4C003F916D /* ECoXiS.swift in Sources */,
-				A1604E451A14FD1D003F916D /* FooCommand.swift in Sources */,
 				A1604E371A14EE60003F916D /* Command.swift in Sources */,
 				A1604E301A14EE4C003F916D /* StringCreation.swift in Sources */,
 				A1604E3A1A14EE60003F916D /* Stream.swift in Sources */,
