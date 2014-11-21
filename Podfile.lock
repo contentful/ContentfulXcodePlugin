@@ -17,7 +17,7 @@ PODS:
   - AFNetworking/Reachability (2.5.0)
   - AFNetworking/Security (2.5.0)
   - AFNetworking/Serialization (2.5.0)
-  - ContentfulDeliveryAPI (1.4.7):
+  - ContentfulDeliveryAPI (HEAD based on 1.4.7):
     - AFNetworking
     - HRCoder
     - ISO8601DateFormatter
@@ -27,6 +27,7 @@ PODS:
   - ISO8601DateFormatter (0.7)
 
 DEPENDENCIES:
+  - ContentfulDeliveryAPI (HEAD)
   - ContentfulManagementAPI
 
 SPEC CHECKSUMS:
