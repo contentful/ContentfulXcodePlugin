@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7300D495856BF0FAE98F6E30 /* libPods-ContentfulModelGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBE589617E176DEC1A5A42F /* libPods-ContentfulModelGenerator.a */; };
 		A1604E1F1A14DC1B003F916D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E1E1A14DC1B003F916D /* main.swift */; };
 		A1604E271A14EE37003F916D /* EntitySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E241A14EE37003F916D /* EntitySerializer.swift */; };
 		A1604E281A14EE37003F916D /* ModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E251A14EE37003F916D /* ModelSerializer.swift */; };
@@ -26,8 +27,6 @@
 		A1604E461A14FD1D003F916D /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E421A14FD1D003F916D /* HelpCommand.swift */; };
 		A1604E471A14FD1D003F916D /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E431A14FD1D003F916D /* Manager.swift */; };
 		A1604E481A15027C003F916D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
-		A1D4F8D01A1A48CE00A56405 /* ContentfulManagementAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4F8CF1A1A48CE00A56405 /* ContentfulManagementAPI.framework */; };
-		A1D4F8D21A1A492C00A56405 /* ContentfulDeliveryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4F8D11A1A492C00A56405 /* ContentfulDeliveryAPI.framework */; };
 		A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */; };
 		A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */; };
 		A1DB6A5A1A10CE9500F6E5C5 /* ContentfulPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A591A10CE9500F6E5C5 /* ContentfulPlugin.m */; };
@@ -48,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E06AEF55AD3ADD3214D49E8 /* Pods-ContentfulModelGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulModelGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator.debug.xcconfig"; sourceTree = "<group>"; };
+		618BF858B6E4468FF0D7519D /* Pods-ContentfulModelGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulModelGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		A1604DDE1A137085003F916D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A1604E1C1A14DC1B003F916D /* ContentfulModelGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ContentfulModelGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1604E1E1A14DC1B003F916D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -68,8 +69,6 @@
 		A1604E411A14FD1D003F916D /* FooCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FooCommand.swift; path = vendor/CLIKit/CLIKit/FooCommand.swift; sourceTree = SOURCE_ROOT; };
 		A1604E421A14FD1D003F916D /* HelpCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpCommand.swift; path = vendor/CLIKit/CLIKit/HelpCommand.swift; sourceTree = SOURCE_ROOT; };
 		A1604E431A14FD1D003F916D /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = vendor/CLIKit/CLIKit/Manager.swift; sourceTree = SOURCE_ROOT; };
-		A1D4F8CF1A1A48CE00A56405 /* ContentfulManagementAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContentfulManagementAPI.framework; sourceTree = "<group>"; };
-		A1D4F8D11A1A492C00A56405 /* ContentfulDeliveryAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContentfulDeliveryAPI.framework; sourceTree = "<group>"; };
 		A1DB6A4C1A10CE9500F6E5C5 /* ContentfulPlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContentfulPlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -81,6 +80,7 @@
 		A1DB6A6D1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentTypeSelectionDialog.xib; sourceTree = "<group>"; };
 		A1DB6A7D1A10DE0E00F6E5C5 /* ContentfulModelGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentfulModelGenerator.h; sourceTree = "<group>"; };
 		A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentfulModelGenerator.m; sourceTree = "<group>"; };
+		FFBE589617E176DEC1A5A42F /* libPods-ContentfulModelGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContentfulModelGenerator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1D4F8D21A1A492C00A56405 /* ContentfulDeliveryAPI.framework in Frameworks */,
-				A1D4F8D01A1A48CE00A56405 /* ContentfulManagementAPI.framework in Frameworks */,
 				A1604E481A15027C003F916D /* SystemConfiguration.framework in Frameworks */,
+				7300D495856BF0FAE98F6E30 /* libPods-ContentfulModelGenerator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D3F0CB4DDDF568C08C00C43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E06AEF55AD3ADD3214D49E8 /* Pods-ContentfulModelGenerator.debug.xcconfig */,
+				618BF858B6E4468FF0D7519D /* Pods-ContentfulModelGenerator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A1604E231A14EE1E003F916D /* MOMSerializer */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +149,7 @@
 			children = (
 				A1DB6A531A10CE9500F6E5C5 /* Code */,
 				A1DB6A4E1A10CE9500F6E5C5 /* Frameworks */,
+				5D3F0CB4DDDF568C08C00C43 /* Pods */,
 				A1DB6A4D1A10CE9500F6E5C5 /* Products */,
 				A1DB6A621A10D87000F6E5C5 /* Resources */,
 				A1DB6A541A10CE9500F6E5C5 /* Supporting Files */,
@@ -160,10 +169,9 @@
 			isa = PBXGroup;
 			children = (
 				A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */,
-				A1D4F8D11A1A492C00A56405 /* ContentfulDeliveryAPI.framework */,
-				A1D4F8CF1A1A48CE00A56405 /* ContentfulManagementAPI.framework */,
 				A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */,
 				A1604DDE1A137085003F916D /* SystemConfiguration.framework */,
+				FFBE589617E176DEC1A5A42F /* libPods-ContentfulModelGenerator.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1604E221A14DC1B003F916D /* Build configuration list for PBXNativeTarget "ContentfulModelGenerator" */;
 			buildPhases = (
+				0D966649C1E6370D646DA68A /* Check Pods Manifest.lock */,
 				A1604E181A14DC1B003F916D /* Sources */,
 				A1604E191A14DC1B003F916D /* Frameworks */,
 				A1604E1A1A14DC1B003F916D /* CopyFiles */,
+				17100103AB0AFF4B3762D562 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +294,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D966649C1E6370D646DA68A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		17100103AB0AFF4B3762D562 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A1604E181A14DC1B003F916D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -324,6 +367,7 @@
 /* Begin XCBuildConfiguration section */
 		A1604E201A14DC1B003F916D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E06AEF55AD3ADD3214D49E8 /* Pods-ContentfulModelGenerator.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -343,6 +387,7 @@
 		};
 		A1604E211A14DC1B003F916D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 618BF858B6E4468FF0D7519D /* Pods-ContentfulModelGenerator.release.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
