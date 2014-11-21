@@ -21,12 +21,13 @@
 		A1604E3A1A14EE60003F916D /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E351A14EE60003F916D /* Stream.swift */; };
 		A1604E3B1A14EE60003F916D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E361A14EE60003F916D /* String.swift */; };
 		A1604E3C1A14EF1B003F916D /* ContentfulModelGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */; };
-		A1604E3D1A14EF2E003F916D /* ContentfulDeliveryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */; };
 		A1604E441A14FD1D003F916D /* ARGV.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E401A14FD1D003F916D /* ARGV.swift */; };
 		A1604E451A14FD1D003F916D /* FooCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E411A14FD1D003F916D /* FooCommand.swift */; };
 		A1604E461A14FD1D003F916D /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E421A14FD1D003F916D /* HelpCommand.swift */; };
 		A1604E471A14FD1D003F916D /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E431A14FD1D003F916D /* Manager.swift */; };
 		A1604E481A15027C003F916D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
+		A1D4F8D01A1A48CE00A56405 /* ContentfulManagementAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4F8CF1A1A48CE00A56405 /* ContentfulManagementAPI.framework */; };
+		A1D4F8D21A1A492C00A56405 /* ContentfulDeliveryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D4F8D11A1A492C00A56405 /* ContentfulDeliveryAPI.framework */; };
 		A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */; };
 		A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */; };
 		A1DB6A5A1A10CE9500F6E5C5 /* ContentfulPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A591A10CE9500F6E5C5 /* ContentfulPlugin.m */; };
@@ -47,7 +48,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContentfulDeliveryAPI.framework; sourceTree = "<group>"; };
 		A1604DDE1A137085003F916D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A1604E1C1A14DC1B003F916D /* ContentfulModelGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ContentfulModelGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1604E1E1A14DC1B003F916D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -68,6 +68,8 @@
 		A1604E411A14FD1D003F916D /* FooCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FooCommand.swift; path = vendor/CLIKit/CLIKit/FooCommand.swift; sourceTree = SOURCE_ROOT; };
 		A1604E421A14FD1D003F916D /* HelpCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpCommand.swift; path = vendor/CLIKit/CLIKit/HelpCommand.swift; sourceTree = SOURCE_ROOT; };
 		A1604E431A14FD1D003F916D /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = vendor/CLIKit/CLIKit/Manager.swift; sourceTree = SOURCE_ROOT; };
+		A1D4F8CF1A1A48CE00A56405 /* ContentfulManagementAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContentfulManagementAPI.framework; sourceTree = "<group>"; };
+		A1D4F8D11A1A492C00A56405 /* ContentfulDeliveryAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContentfulDeliveryAPI.framework; sourceTree = "<group>"; };
 		A1DB6A4C1A10CE9500F6E5C5 /* ContentfulPlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContentfulPlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -86,8 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D4F8D21A1A492C00A56405 /* ContentfulDeliveryAPI.framework in Frameworks */,
+				A1D4F8D01A1A48CE00A56405 /* ContentfulManagementAPI.framework in Frameworks */,
 				A1604E481A15027C003F916D /* SystemConfiguration.framework in Frameworks */,
-				A1604E3D1A14EF2E003F916D /* ContentfulDeliveryAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */,
-				A1604DDB1A13706D003F916D /* ContentfulDeliveryAPI.framework */,
+				A1D4F8D11A1A492C00A56405 /* ContentfulDeliveryAPI.framework */,
+				A1D4F8CF1A1A48CE00A56405 /* ContentfulManagementAPI.framework */,
 				A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */,
 				A1604DDE1A137085003F916D /* SystemConfiguration.framework */,
 			);
