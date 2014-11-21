@@ -12,7 +12,11 @@
 
 @interface ContentfulModelGenerator ()
 
+@property (nonatomic) NSEntityDescription* assetEntity;
 @property (nonatomic) CMAClient* client;
+@property (nonatomic) NSDictionary* contentTypes;
+@property (nonatomic) NSMutableDictionary* entities;
+@property (nonatomic) NSMutableArray* relationshipsForPostProcessing;
 @property (nonatomic) NSString* spaceKey;
 
 @end
@@ -60,10 +64,29 @@
 
 #pragma mark -
 
+-(CDAContentType*)contentTypeValidationForField:(CMAField*)field {
+    if (field.itemType != CDAFieldTypeEntry) {
+        return nil;
+    }
+
+    NSArray* validations = [field.validations valueForKey:@"dictionaryRepresentation"];
+
+    for (NSDictionary* validation in validations) {
+        NSArray* possibleValidation = validation[@"linkContentType"];
+        if (possibleValidation.count == 1) {
+            return self.contentTypes[possibleValidation[0]];
+        }
+    }
+
+    return nil;
+}
+
 -(instancetype)initWithClient:(CMAClient *)client spaceKey:(NSString *)spaceKey {
     self = [super init];
     if (self) {
         self.client = client;
+        self.entities = [@{} mutableCopy];
+        self.relationshipsForPostProcessing = [@[] mutableCopy];
         self.spaceKey = spaceKey;
     }
     return self;
@@ -71,10 +94,16 @@
 
 -(NSEntityDescription*)generateEntityForContentType:(CDAContentType*)contentType {
     NSEntityDescription* entity = [[self class] entityWithName:contentType.name];
+    self.entities[contentType.identifier] = entity;
+    return entity;
+}
+
+-(void)handleFieldsForContentType:(CDAContentType*)contentType {
+    NSEntityDescription* entity = self.entities[contentType.identifier];
 
     NSMutableArray* properties = [@[] mutableCopy];
 
-    for (CDAField* field in contentType.fields) {
+    for (CMAField* field in contentType.fields) {
         if (field.disabled) {
             continue;
         }
@@ -82,12 +111,31 @@
         switch (field.type) {
             case CDAFieldTypeArray:
             case CDAFieldTypeLink: {
+                if (field.itemType != CDAFieldTypeAsset && field.itemType != CDAFieldTypeEntry) {
+                    continue;
+                }
+
                 NSRelationshipDescription* relation = [NSRelationshipDescription new];
                 relation.name = field.identifier;
+                relation.maxCount = field.type == CDAFieldTypeArray ? 0 : 1;
+                relation.ordered = field.type == CDAFieldTypeArray;
                 relation.optional = YES;
-                //relation.destinationEntity = nil;
+
+                if (field.itemType == CDAFieldTypeAsset) {
+                    relation.destinationEntity = self.assetEntity;
+                } else {
+                    CDAContentType* contentType = [self contentTypeValidationForField:field];
+
+                    if (!contentType) {
+                        fprintf(stderr, "%s\n", [[NSString stringWithFormat:@"Error: field '%@' (content-type %@) is missing content type validations.", field.identifier, contentType.identifier] cStringUsingEncoding:NSUTF8StringEncoding]);
+                        exit(1);
+                    }
+
+                    relation.destinationEntity = self.entities[contentType.identifier];
+                }
 
                 [properties addObject:relation];
+                [self.relationshipsForPostProcessing addObject:relation];
                 break;
             }
             case CDAFieldTypeNone:
@@ -104,7 +152,6 @@
     [properties addObject:[[self class] attributeWithName:@"identifier" type:NSStringAttributeType]];
     
     entity.properties = properties;
-    return entity;
 }
 
 -(NSEntityDescription*)generateStandardEntityForAssets {
@@ -150,13 +197,30 @@
         [space fetchContentTypesWithSuccess:^(CDAResponse *response, CDAArray *array) {
             NSMutableArray* entities = [@[] mutableCopy];
 
+            NSMutableDictionary* contentTypes = [@{} mutableCopy];
             for (CDAContentType* contentType in array.items) {
+                contentTypes[contentType.identifier] = contentType;
+            }
+            self.contentTypes = contentTypes;
+
+            self.assetEntity = [self generateStandardEntityForAssets];
+            [entities addObject:self.assetEntity];
+            [entities addObject:[self generateStandardEntityForSyncInfo]];
+
+            for (CDAContentType* contentType in self.contentTypes.allValues) {
                 NSEntityDescription* entity = [self generateEntityForContentType:contentType];
                 [entities addObject:entity];
             }
 
-            [entities addObject:[self generateStandardEntityForAssets]];
-            [entities addObject:[self generateStandardEntityForSyncInfo]];
+            for (CDAContentType* contentType in self.contentTypes.allValues) {
+                [self handleFieldsForContentType:contentType];
+            }
+
+            for (NSEntityDescription* entity in entities) {
+                for (NSRelationshipDescription* relation in entity.relationshipsByName.allValues) {
+                    relation.inverseRelationship = [self relationshipWithTarget:entity];
+                }
+            }
 
             NSManagedObjectModel* model = [NSManagedObjectModel new];
             model.entities = [entities copy];
@@ -167,6 +231,16 @@
     } failure:^(CDAResponse *response, NSError *error) {
         handler(nil, error);
     }];
+}
+
+-(NSRelationshipDescription*)relationshipWithTarget:(NSEntityDescription*)entity {
+    for (NSRelationshipDescription* relation in self.relationshipsForPostProcessing) {
+        if (relation.destinationEntity == entity) {
+            return relation;
+        }
+    }
+
+    return nil;
 }
 
 @end
