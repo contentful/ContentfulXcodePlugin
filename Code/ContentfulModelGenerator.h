@@ -9,13 +9,13 @@
 #import <CoreData/CoreData.h>
 #import <Foundation/Foundation.h>
 
-@class CDAClient;
+@class CMAClient;
 
 typedef void(^CDAModelGenerationHandler)(NSManagedObjectModel* model, NSError* error);
 
 @interface ContentfulModelGenerator : NSObject
 
 -(void)generateModelForContentTypesWithCompletionHandler:(CDAModelGenerationHandler)handler;
--(instancetype)initWithClient:(CDAClient*)client;
+-(instancetype)initWithClient:(CMAClient*)client spaceKey:(NSString*)spaceKey;
 
 @end

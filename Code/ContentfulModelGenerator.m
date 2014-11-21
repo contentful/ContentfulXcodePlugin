@@ -6,13 +6,14 @@
 //  Copyright (c) 2014 Contentful GmbH. All rights reserved.
 //
 
-#import <ContentfulDeliveryAPI/ContentfulDeliveryAPI.h>
+#import <ContentfulManagementAPI/ContentfulManagementAPI.h>
 
 #import "ContentfulModelGenerator.h"
 
 @interface ContentfulModelGenerator ()
 
-@property (nonatomic) CDAClient* client;
+@property (nonatomic) CMAClient* client;
+@property (nonatomic) NSString* spaceKey;
 
 @end
 
@@ -59,10 +60,11 @@
 
 #pragma mark -
 
--(instancetype)initWithClient:(CDAClient*)client {
+-(instancetype)initWithClient:(CMAClient *)client spaceKey:(NSString *)spaceKey {
     self = [super init];
     if (self) {
         self.client = client;
+        self.spaceKey = spaceKey;
     }
     return self;
 }
@@ -144,20 +146,24 @@
 -(void)generateModelForContentTypesWithCompletionHandler:(CDAModelGenerationHandler)handler {
     NSParameterAssert(handler);
 
-    [self.client fetchContentTypesWithSuccess:^(CDAResponse *response, CDAArray *array) {
-        NSMutableArray* entities = [@[] mutableCopy];
+    [self.client fetchSpaceWithIdentifier:self.spaceKey success:^(CDAResponse *response, CMASpace *space) {
+        [space fetchContentTypesWithSuccess:^(CDAResponse *response, CDAArray *array) {
+            NSMutableArray* entities = [@[] mutableCopy];
 
-        for (CDAContentType* contentType in array.items) {
-            NSEntityDescription* entity = [self generateEntityForContentType:contentType];
-            [entities addObject:entity];
-        }
+            for (CDAContentType* contentType in array.items) {
+                NSEntityDescription* entity = [self generateEntityForContentType:contentType];
+                [entities addObject:entity];
+            }
 
-        [entities addObject:[self generateStandardEntityForAssets]];
-        [entities addObject:[self generateStandardEntityForSyncInfo]];
+            [entities addObject:[self generateStandardEntityForAssets]];
+            [entities addObject:[self generateStandardEntityForSyncInfo]];
 
-        NSManagedObjectModel* model = [NSManagedObjectModel new];
-        model.entities = [entities copy];
-        handler(model, nil);
+            NSManagedObjectModel* model = [NSManagedObjectModel new];
+            model.entities = [entities copy];
+            handler(model, nil);
+        } failure:^(CDAResponse *response, NSError *error) {
+            handler(nil, error);
+        }];
     } failure:^(CDAResponse *response, NSError *error) {
         handler(nil, error);
     }];

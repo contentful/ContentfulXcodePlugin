@@ -7,5 +7,6 @@
 //
 
 #import <ContentfulDeliveryAPI/ContentfulDeliveryAPI.h>
+#import <ContentfulManagementAPI/ContentfulManagementAPI.h>
 
 #import "ContentfulModelGenerator.h"
