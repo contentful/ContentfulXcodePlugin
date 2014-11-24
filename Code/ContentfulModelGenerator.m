@@ -73,6 +73,11 @@
 
     for (NSDictionary* validation in validations) {
         NSArray* possibleValidation = validation[@"linkContentType"];
+
+        if ([possibleValidation isKindOfClass:NSString.class]) {
+            return self.contentTypes[possibleValidation];
+        }
+
         if (possibleValidation.count == 1) {
             return self.contentTypes[possibleValidation[0]];
         }
