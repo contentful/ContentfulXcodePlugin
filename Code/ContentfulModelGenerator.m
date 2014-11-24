@@ -16,7 +16,6 @@
 @property (nonatomic) CMAClient* client;
 @property (nonatomic) NSDictionary* contentTypes;
 @property (nonatomic) NSMutableDictionary* entities;
-@property (nonatomic) NSMutableArray* relationshipsForPostProcessing;
 @property (nonatomic) NSString* spaceKey;
 
 @end
@@ -91,7 +90,6 @@
     if (self) {
         self.client = client;
         self.entities = [@{} mutableCopy];
-        self.relationshipsForPostProcessing = [@[] mutableCopy];
         self.spaceKey = spaceKey;
     }
     return self;
@@ -128,19 +126,30 @@
 
                 if (field.itemType == CDAFieldTypeAsset) {
                     relation.destinationEntity = self.assetEntity;
-                } else {
-                    CDAContentType* contentType = [self contentTypeValidationForField:field];
 
-                    if (!contentType) {
+                    NSRelationshipDescription* inverse = [NSRelationshipDescription new];
+                    inverse.name = [contentType.name stringByAppendingString:@"Inverse"];
+                    inverse.optional = YES;
+                    inverse.destinationEntity = entity;
+
+                    inverse.inverseRelationship = relation;
+                    relation.inverseRelationship = inverse;
+
+                    NSMutableArray* properties = [self.assetEntity.properties mutableCopy];
+                    [properties addObject:inverse];
+                    self.assetEntity.properties = properties;
+                } else {
+                    CDAContentType* possibleContentType = [self contentTypeValidationForField:field];
+
+                    if (!possibleContentType) {
                         fprintf(stderr, "%s\n", [[NSString stringWithFormat:@"Error: field '%@' (content-type %@) is missing content type validations.", field.identifier, contentType.identifier] cStringUsingEncoding:NSUTF8StringEncoding]);
                         exit(1);
                     }
 
-                    relation.destinationEntity = self.entities[contentType.identifier];
+                    relation.destinationEntity = self.entities[possibleContentType.identifier];
                 }
 
                 [properties addObject:relation];
-                [self.relationshipsForPostProcessing addObject:relation];
                 break;
             }
             case CDAFieldTypeNone:
@@ -223,7 +232,32 @@
 
             for (NSEntityDescription* entity in entities) {
                 for (NSRelationshipDescription* relation in entity.relationshipsByName.allValues) {
-                    relation.inverseRelationship = [self relationshipWithTarget:entity];
+                    if (relation.inverseRelationship) {
+                        continue;
+                    }
+
+                    NSEntityDescription* destination = relation.destinationEntity;
+                    NSRelationshipDescription* inverse = nil;
+
+                    for (NSRelationshipDescription* r in destination.relationshipsByName.allValues) {
+                        if (r.destinationEntity == entity && r.inverseRelationship == nil) {
+                            inverse = r;
+                        }
+                    }
+
+                    if (!inverse) {
+                        inverse = [NSRelationshipDescription new];
+                        inverse.name = [relation.name stringByAppendingString:@"Inverse"];
+                        inverse.optional = YES;
+                        inverse.destinationEntity = entity;
+
+                        NSMutableArray* properties = [destination.properties mutableCopy];
+                        [properties addObject:inverse];
+                        destination.properties = properties;
+                    }
+
+                    inverse.inverseRelationship = relation;
+                    relation.inverseRelationship = inverse;
                 }
             }
 
@@ -236,16 +270,6 @@
     } failure:^(CDAResponse *response, NSError *error) {
         handler(nil, error);
     }];
-}
-
--(NSRelationshipDescription*)relationshipWithTarget:(NSEntityDescription*)entity {
-    for (NSRelationshipDescription* relation in self.relationshipsForPostProcessing) {
-        if (relation.destinationEntity == entity) {
-            return relation;
-        }
-    }
-
-    return nil;
 }
 
 @end
