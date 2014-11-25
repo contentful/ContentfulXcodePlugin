@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7300D495856BF0FAE98F6E30 /* libPods-ContentfulModelGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBE589617E176DEC1A5A42F /* libPods-ContentfulModelGenerator.a */; };
+		A117BED11A238E4200C53D65 /* ContentfulModelGenerator in Resources */ = {isa = PBXBuildFile; fileRef = A117BED01A238E4200C53D65 /* ContentfulModelGenerator */; };
+		A117BED41A2398D500C53D65 /* ContentfulDeliveryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A117BED21A2398D500C53D65 /* ContentfulDeliveryAPI.framework */; };
+		A117BED51A2398D500C53D65 /* ContentfulManagementAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A117BED31A2398D500C53D65 /* ContentfulManagementAPI.framework */; };
+		A117BED61A23995C00C53D65 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
 		A1604E1F1A14DC1B003F916D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E1E1A14DC1B003F916D /* main.swift */; };
 		A1604E271A14EE37003F916D /* EntitySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E241A14EE37003F916D /* EntitySerializer.swift */; };
 		A1604E281A14EE37003F916D /* ModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E251A14EE37003F916D /* ModelSerializer.swift */; };
@@ -49,6 +53,8 @@
 /* Begin PBXFileReference section */
 		1E06AEF55AD3ADD3214D49E8 /* Pods-ContentfulModelGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulModelGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		618BF858B6E4468FF0D7519D /* Pods-ContentfulModelGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulModelGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		A117BED21A2398D500C53D65 /* ContentfulDeliveryAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContentfulDeliveryAPI.framework; path = Resources/ContentfulDeliveryAPI.framework; sourceTree = "<group>"; };
+		A117BED31A2398D500C53D65 /* ContentfulManagementAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContentfulManagementAPI.framework; path = Resources/ContentfulManagementAPI.framework; sourceTree = "<group>"; };
 		A1604DDE1A137085003F916D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A1604E1C1A14DC1B003F916D /* ContentfulModelGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ContentfulModelGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1604E1E1A14DC1B003F916D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -97,7 +103,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A117BED61A23995C00C53D65 /* SystemConfiguration.framework in Frameworks */,
+				A117BED41A2398D500C53D65 /* ContentfulDeliveryAPI.framework in Frameworks */,
 				A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */,
+				A117BED51A2398D500C53D65 /* ContentfulManagementAPI.framework in Frameworks */,
 				A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */,
+				A117BED21A2398D500C53D65 /* ContentfulDeliveryAPI.framework */,
+				A117BED31A2398D500C53D65 /* ContentfulManagementAPI.framework */,
 				A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */,
 				A1604DDE1A137085003F916D /* SystemConfiguration.framework */,
 				FFBE589617E176DEC1A5A42F /* libPods-ContentfulModelGenerator.a */,
