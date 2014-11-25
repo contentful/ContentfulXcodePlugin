@@ -53,6 +53,7 @@
 /* Begin PBXFileReference section */
 		1E06AEF55AD3ADD3214D49E8 /* Pods-ContentfulModelGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulModelGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		618BF858B6E4468FF0D7519D /* Pods-ContentfulModelGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulModelGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		A117BED01A238E4200C53D65 /* ContentfulModelGenerator */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ContentfulModelGenerator; sourceTree = "<group>"; };
 		A117BED21A2398D500C53D65 /* ContentfulDeliveryAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContentfulDeliveryAPI.framework; path = Resources/ContentfulDeliveryAPI.framework; sourceTree = "<group>"; };
 		A117BED31A2398D500C53D65 /* ContentfulManagementAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContentfulManagementAPI.framework; path = Resources/ContentfulManagementAPI.framework; sourceTree = "<group>"; };
 		A1604DDE1A137085003F916D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -215,6 +216,7 @@
 		A1DB6A621A10D87000F6E5C5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A117BED01A238E4200C53D65 /* ContentfulModelGenerator */,
 				A1DB6A6D1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib */,
 			);
 			path = Resources;
@@ -299,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A117BED11A238E4200C53D65 /* ContentfulModelGenerator in Resources */,
 				A1DB6A6F1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
