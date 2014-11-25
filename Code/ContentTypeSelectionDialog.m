@@ -8,6 +8,7 @@
 
 #import <ContentfulManagementAPI/ContentfulManagementAPI.h>
 #import <ContentfulManagementAPI/CMAArray.h>
+#import <ContentfulManagementAPI/CMAError.h>
 
 #import "ContentTypeSelectionDialog.h"
 
@@ -31,7 +32,7 @@
 // Terrible workaround to keep static builds from stripping these classes out.
 +(void)load {
 #ifndef __clang_analyzer__
-    NSArray* classes = @[ [CMAArray class], [CMASpace class] ];
+    NSArray* classes = @[ [CMAArray class], [CMAError class], [CMASpace class] ];
     classes = nil;
 #endif
 }
