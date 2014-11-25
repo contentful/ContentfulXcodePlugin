@@ -9,7 +9,9 @@
                 <outlet property="accessTokenTextField" destination="7RG-4V-pbW" id="eIA-q4-oZF"/>
                 <outlet property="generateButton" destination="Dmx-6R-jsP" id="YHj-a6-otk"/>
                 <outlet property="loginButton" destination="bJs-PL-YTv" id="30b-pf-KA8"/>
+                <outlet property="spaceSelection" destination="zwY-Ko-xba" id="sKW-3Q-Si6"/>
                 <outlet property="spaceSelectionMenu" destination="ipu-QE-apM" id="5tJ-54-LOi"/>
+                <outlet property="targetSelection" destination="W1X-gX-Yud" id="ZSx-Zi-Bbz"/>
                 <outlet property="targetSelectionMenu" destination="jLy-iD-ikc" id="8bt-YL-abW"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -20,7 +22,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="480" height="294"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="294"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -69,7 +71,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oyN-EB-n5R">
-                        <rect key="frame" x="18" y="98" width="38" height="17"/>
+                        <rect key="frame" x="18" y="98" width="55" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Target" id="c0G-Du-T7o">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
