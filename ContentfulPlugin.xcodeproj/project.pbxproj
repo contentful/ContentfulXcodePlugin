@@ -16,6 +16,8 @@
 		A13C067F1A26014F00C8F657 /* DJBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C06791A26014F00C8F657 /* DJBezierPath.m */; };
 		A13C06801A26014F00C8F657 /* DJProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C067B1A26014F00C8F657 /* DJProgressHUD.m */; };
 		A13C06811A26014F00C8F657 /* DJProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C067D1A26014F00C8F657 /* DJProgressIndicator.m */; };
+		A13C06871A2626A400C8F657 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C06841A2626A400C8F657 /* SSKeychain.m */; };
+		A13C06881A2626A400C8F657 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C06861A2626A400C8F657 /* SSKeychainQuery.m */; };
 		A1604E1F1A14DC1B003F916D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E1E1A14DC1B003F916D /* main.swift */; };
 		A1604E271A14EE37003F916D /* EntitySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E241A14EE37003F916D /* EntitySerializer.swift */; };
 		A1604E281A14EE37003F916D /* ModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E251A14EE37003F916D /* ModelSerializer.swift */; };
@@ -69,6 +71,10 @@
 		A13C067B1A26014F00C8F657 /* DJProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DJProgressHUD.m; path = vendor/DJProgressHUD/DJProgressHUD/DJProgressHUD.m; sourceTree = SOURCE_ROOT; };
 		A13C067C1A26014F00C8F657 /* DJProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DJProgressIndicator.h; path = vendor/DJProgressHUD/DJProgressHUD/DJProgressIndicator.h; sourceTree = SOURCE_ROOT; };
 		A13C067D1A26014F00C8F657 /* DJProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DJProgressIndicator.m; path = vendor/DJProgressHUD/DJProgressHUD/DJProgressIndicator.m; sourceTree = SOURCE_ROOT; };
+		A13C06831A2626A400C8F657 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = vendor/sskeychain/SSKeychain/SSKeychain.h; sourceTree = SOURCE_ROOT; };
+		A13C06841A2626A400C8F657 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = vendor/sskeychain/SSKeychain/SSKeychain.m; sourceTree = SOURCE_ROOT; };
+		A13C06851A2626A400C8F657 /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = vendor/sskeychain/SSKeychain/SSKeychainQuery.h; sourceTree = SOURCE_ROOT; };
+		A13C06861A2626A400C8F657 /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychainQuery.m; path = vendor/sskeychain/SSKeychain/SSKeychainQuery.m; sourceTree = SOURCE_ROOT; };
 		A1604DDE1A137085003F916D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A1604E1C1A14DC1B003F916D /* ContentfulModelGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ContentfulModelGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1604E1E1A14DC1B003F916D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -154,6 +160,17 @@
 			name = DJProgressHUD;
 			sourceTree = "<group>";
 		};
+		A13C06821A26268600C8F657 /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				A13C06831A2626A400C8F657 /* SSKeychain.h */,
+				A13C06841A2626A400C8F657 /* SSKeychain.m */,
+				A13C06851A2626A400C8F657 /* SSKeychainQuery.h */,
+				A13C06861A2626A400C8F657 /* SSKeychainQuery.m */,
+			);
+			name = SSKeychain;
+			sourceTree = "<group>";
+		};
 		A1604E231A14EE1E003F916D /* MOMSerializer */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +241,7 @@
 				A1604E3F1A14FD0A003F916D /* CLIKit */,
 				A13C06751A26013200C8F657 /* DJProgressHUD */,
 				A1604E231A14EE1E003F916D /* MOMSerializer */,
+				A13C06821A26268600C8F657 /* SSKeychain */,
 				A1604E3E1A14FB51003F916D /* ContentfulModelGenerator-Bridge.h */,
 				A1DB6A7D1A10DE0E00F6E5C5 /* ContentfulModelGenerator.h */,
 				A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */,
@@ -405,6 +423,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13C067F1A26014F00C8F657 /* DJBezierPath.m in Sources */,
+				A13C06881A2626A400C8F657 /* SSKeychainQuery.m in Sources */,
+				A13C06871A2626A400C8F657 /* SSKeychain.m in Sources */,
 				A13C06811A26014F00C8F657 /* DJProgressIndicator.m in Sources */,
 				A13C067E1A26014F00C8F657 /* DJActivityIndicator.m in Sources */,
 				A1DB6A6E1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m in Sources */,

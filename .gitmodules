@@ -10,3 +10,6 @@
 [submodule "vendor/DJProgressHUD"]
 	path = vendor/DJProgressHUD
 	url = https://github.com/danielmj/DJProgressHUD_OSX.git
+[submodule "vendor/sskeychain"]
+	path = vendor/sskeychain
+	url = https://github.com/soffes/sskeychain.git

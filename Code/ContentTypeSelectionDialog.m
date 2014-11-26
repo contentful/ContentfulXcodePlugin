@@ -12,7 +12,10 @@
 
 #import "ContentTypeSelectionDialog.h"
 #import "DJProgressHUD.h"
+#import "SSKeychain.h"
 #import "XcodeProjectManipulation.h"
+
+static NSString* const kContentful = @"com.contentful.xcode-plugin";
 
 @interface ContentTypeSelectionDialog ()
 
@@ -97,12 +100,38 @@
     return self;
 }
 
+-(void)performLogin {
+    self.client = [[CMAClient alloc] initWithAccessToken:self.accessTokenTextField.stringValue];
+
+    [self.client fetchAllSpacesWithSuccess:^(CDAResponse *response, CDAArray *array) {
+        [SSKeychain setPassword:self.accessTokenTextField.stringValue
+                     forService:kContentful
+                        account:kContentful];
+
+        [self fillMenuWithSpaces:array.items];
+        [self fillMenuWithTargets:[self.projectManipulation targets]];
+
+        self.generateButton.enabled = self.spaceSelection.enabled && self.targetSelection.enabled;
+    } failure:^(CDAResponse *response, NSError *error) {
+        NSAlert* alert = [NSAlert alertWithError:error];
+        [alert runModal];
+    }];
+}
+
 -(void)selectSpace:(NSMenuItem*)menuItem {
     self.selectedSpace = menuItem.representedObject;
 }
 
 -(void)selectTarget:(NSMenuItem*)menuItem {
     self.selectedTarget = menuItem.representedObject;
+}
+
+-(void)windowDidLoad {
+    [super windowDidLoad];
+
+    self.accessTokenTextField.stringValue = [SSKeychain passwordForService:kContentful
+                                                                   account:kContentful] ?: @"";
+    [self performLogin];
 }
 
 #pragma mark - Actions
@@ -148,17 +177,7 @@
 }
 
 - (IBAction)loginClicked:(NSButton*)sender {
-    self.client = [[CMAClient alloc] initWithAccessToken:self.accessTokenTextField.stringValue];
-
-    [self.client fetchAllSpacesWithSuccess:^(CDAResponse *response, CDAArray *array) {
-        [self fillMenuWithSpaces:array.items];
-        [self fillMenuWithTargets:[self.projectManipulation targets]];
-
-        self.generateButton.enabled = self.spaceSelection.enabled && self.targetSelection.enabled;
-    } failure:^(CDAResponse *response, NSError *error) {
-        NSAlert* alert = [NSAlert alertWithError:error];
-        [alert runModal];
-    }];
+    [self performLogin];
 }
 
 - (IBAction)obtainAccessTokenClicked:(NSButton*)sender {
