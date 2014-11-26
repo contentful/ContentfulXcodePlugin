@@ -11,6 +11,7 @@
 #import <ContentfulManagementAPI/CMAError.h>
 
 #import "ContentTypeSelectionDialog.h"
+#import "DJProgressHUD.h"
 #import "XcodeProjectManipulation.h"
 
 @interface ContentTypeSelectionDialog ()
@@ -118,9 +119,16 @@
     task.currentDirectoryPath = [self.projectManipulation workspacePath];
     task.launchPath = generatorBinaryPath;
 
+    [DJProgressHUD showStatus:NSLocalizedString(@"Generating...", nil)
+                     FromView:self.window.contentView];
+
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [task launch];
         [task waitUntilExit];
+
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [DJProgressHUD dismiss];
+        });
 
         NSString* potentialPath = [[self.projectManipulation workspacePath] stringByAppendingPathComponent:@"ContentfulModel.xcdatamodeld"];
         BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:potentialPath];

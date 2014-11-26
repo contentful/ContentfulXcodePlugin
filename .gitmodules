@@ -7,3 +7,6 @@
 [submodule "vendor/xcproj"]
 	path = vendor/xcproj
 	url = https://github.com/neonichu/xcproj.git
+[submodule "vendor/DJProgressHUD"]
+	path = vendor/DJProgressHUD
+	url = https://github.com/danielmj/DJProgressHUD_OSX.git
