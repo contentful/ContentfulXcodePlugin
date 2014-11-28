@@ -148,6 +148,9 @@ static NSString* const kContentful = @"com.contentful.xcode-plugin";
     task.currentDirectoryPath = [self.projectManipulation workspacePath];
     task.launchPath = generatorBinaryPath;
 
+    NSPipe* errorPipe = [NSPipe pipe];
+    task.standardError = errorPipe;
+
     [DJProgressHUD showStatus:NSLocalizedString(@"Generating...", nil)
                      FromView:self.window.contentView];
 
@@ -164,8 +167,10 @@ static NSString* const kContentful = @"com.contentful.xcode-plugin";
 
         dispatch_sync(dispatch_get_main_queue(), ^{
             if (!exists) {
+                NSString* errorString = [[NSString alloc] initWithData:[[errorPipe fileHandleForReading] readDataToEndOfFile] encoding:NSUTF8StringEncoding];
+
                 NSAlert* alert = [NSAlert new];
-                alert.messageText = NSLocalizedString(@"Could not generate data model.", nil);
+                alert.messageText = [NSString stringWithFormat:NSLocalizedString(@"Could not generate data model: %@", nil), errorString];
                 [alert runModal];
             } else {
                 [self.projectManipulation addFileAtPath:potentialPath toTarget:self.selectedTarget];
