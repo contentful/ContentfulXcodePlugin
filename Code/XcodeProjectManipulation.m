@@ -56,7 +56,7 @@
                                            performSelector:@selector(workspaceWindowControllers)];
 
     for (NSWindowController* controller in workspaceWindowControllers) {
-        if ([controller.window isKeyWindow]) {
+        if (controller.window == [NSApp keyWindow].sheetParent) {
             return controller;
         }
     }
