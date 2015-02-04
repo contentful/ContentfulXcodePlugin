@@ -128,8 +128,8 @@
                     relation.destinationEntity = self.assetEntity;
 
                     NSRelationshipDescription* inverse = [NSRelationshipDescription new];
-                    inverse.name = [NSString stringWithFormat:@"%@-%@-Inverse", contentType.name,
-                                    field.name];
+                    inverse.name = [NSString stringWithFormat:@"%@_%@_Inverse", field.identifier,
+                                    contentType.identifier];
                     inverse.optional = YES;
                     inverse.destinationEntity = entity;
 
