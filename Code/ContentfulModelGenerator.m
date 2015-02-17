@@ -7,6 +7,7 @@
 //
 
 #import <ContentfulManagementAPI/ContentfulManagementAPI.h>
+#import <objc/runtime.h>
 
 #import "ContentfulModelGenerator.h"
 
@@ -48,6 +49,20 @@
 }
 
 + (NSAttributeDescription*)attributeWithName:(NSString*)name type:(NSAttributeType)type {
+    unsigned int numberOfMethods = 0;
+    Method* methods = class_copyMethodList(NSManagedObject.class, &numberOfMethods);
+
+    for (int i = 0; i < numberOfMethods; i++) {
+        NSString* methodName = NSStringFromSelector(method_getName(methods[i]));
+
+        if ([name isEqualToString:methodName]) {
+            fprintf(stderr, "%s\n", [[NSString stringWithFormat:@"Error: field '%@' redefines a method already present on NSObject or NSManagedObject. ", name] cStringUsingEncoding:NSUTF8StringEncoding]);
+            exit(1);
+        }
+    }
+
+    free(methods);
+
     NSAttributeDescription* veryAttribute = [NSAttributeDescription new];
     veryAttribute.name = name;
     veryAttribute.attributeType = type;
