@@ -131,6 +131,13 @@
         switch (field.type) {
             case CDAFieldTypeArray:
             case CDAFieldTypeLink: {
+                if (field.itemType == CDAFieldTypeSymbol) {
+                    NSAttributeDescription* attribute = [[self class] attributeWithName:field.identifier type:NSBinaryDataAttributeType];
+
+                    [properties addObject:attribute];
+                    continue;
+                }
+
                 if (field.itemType != CDAFieldTypeAsset && field.itemType != CDAFieldTypeEntry) {
                     continue;
                 }
