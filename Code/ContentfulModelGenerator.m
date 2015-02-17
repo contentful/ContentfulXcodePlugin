@@ -55,8 +55,10 @@
 }
 
 + (NSEntityDescription*)entityWithName:(NSString*)name {
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[^_a-zA-Z0-9]" options:0 error:nil];
+
     NSEntityDescription* suchEntity = [NSEntityDescription new];
-    suchEntity.name = name;
+    suchEntity.name = [regex stringByReplacingMatchesInString:name options:0 range:NSMakeRange(0, [name length]) withTemplate:@"_"];
     suchEntity.managedObjectClassName = suchEntity.name;
     return suchEntity;
 }
