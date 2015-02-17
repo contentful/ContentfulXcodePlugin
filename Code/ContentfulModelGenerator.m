@@ -237,8 +237,10 @@
             NSMutableArray* entities = [@[] mutableCopy];
 
             NSMutableDictionary* contentTypes = [@{} mutableCopy];
-            for (CDAContentType* contentType in array.items) {
-                contentTypes[contentType.identifier] = contentType;
+            for (CMAContentType* contentType in array.items) {
+                if (contentType.isPublished) {
+                    contentTypes[contentType.identifier] = contentType;
+                }
             }
             self.contentTypes = contentTypes;
 
