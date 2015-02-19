@@ -43,6 +43,7 @@
 		A1DB6A5A1A10CE9500F6E5C5 /* ContentfulPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A591A10CE9500F6E5C5 /* ContentfulPlugin.m */; };
 		A1DB6A6E1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A6C1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m */; };
 		A1DB6A6F1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DB6A6D1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib */; };
+		A1FB1CBD1A9647AF00ACE078 /* BBUSegmentTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FB1CBC1A9647AF00ACE078 /* BBUSegmentTracker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,6 +109,8 @@
 		A1DB6A6D1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentTypeSelectionDialog.xib; sourceTree = "<group>"; };
 		A1DB6A7D1A10DE0E00F6E5C5 /* ContentfulModelGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentfulModelGenerator.h; sourceTree = "<group>"; };
 		A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentfulModelGenerator.m; sourceTree = "<group>"; };
+		A1FB1CBB1A9647AF00ACE078 /* BBUSegmentTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBUSegmentTracker.h; path = "vendor/segmentio-simple/Pod/Classes/BBUSegmentTracker.h"; sourceTree = SOURCE_ROOT; };
+		A1FB1CBC1A9647AF00ACE078 /* BBUSegmentTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBUSegmentTracker.m; path = "vendor/segmentio-simple/Pod/Classes/BBUSegmentTracker.m"; sourceTree = SOURCE_ROOT; };
 		FFBE589617E176DEC1A5A42F /* libPods-ContentfulModelGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContentfulModelGenerator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -241,6 +244,7 @@
 				A1604E3F1A14FD0A003F916D /* CLIKit */,
 				A13C06751A26013200C8F657 /* DJProgressHUD */,
 				A1604E231A14EE1E003F916D /* MOMSerializer */,
+				A1FB1CBA1A96479200ACE078 /* SegmentIO */,
 				A13C06821A26268600C8F657 /* SSKeychain */,
 				A1604E3E1A14FB51003F916D /* ContentfulModelGenerator-Bridge.h */,
 				A1DB6A7D1A10DE0E00F6E5C5 /* ContentfulModelGenerator.h */,
@@ -271,6 +275,15 @@
 				A1DB6A6D1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1FB1CBA1A96479200ACE078 /* SegmentIO */ = {
+			isa = PBXGroup;
+			children = (
+				A1FB1CBB1A9647AF00ACE078 /* BBUSegmentTracker.h */,
+				A1FB1CBC1A9647AF00ACE078 /* BBUSegmentTracker.m */,
+			);
+			name = SegmentIO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +439,7 @@
 				A13C06881A2626A400C8F657 /* SSKeychainQuery.m in Sources */,
 				A13C06871A2626A400C8F657 /* SSKeychain.m in Sources */,
 				A13C06811A26014F00C8F657 /* DJProgressIndicator.m in Sources */,
+				A1FB1CBD1A9647AF00ACE078 /* BBUSegmentTracker.m in Sources */,
 				A13C067E1A26014F00C8F657 /* DJActivityIndicator.m in Sources */,
 				A1DB6A6E1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m in Sources */,
 				A1CD7B6B1A24CE61009CF393 /* XcodeProjectManipulation.m in Sources */,

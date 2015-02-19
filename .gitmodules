@@ -13,3 +13,6 @@
 [submodule "vendor/sskeychain"]
 	path = vendor/sskeychain
 	url = https://github.com/soffes/sskeychain.git
+[submodule "vendor/segmentio-simple"]
+	path = vendor/segmentio-simple
+	url = https://github.com/neonichu/segmentio-simple.git

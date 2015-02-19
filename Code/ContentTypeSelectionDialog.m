@@ -10,12 +10,14 @@
 #import <ContentfulManagementAPI/CMAArray.h>
 #import <ContentfulManagementAPI/CMAError.h>
 
+#import "BBUSegmentTracker.h"
 #import "ContentTypeSelectionDialog.h"
 #import "DJProgressHUD.h"
 #import "SSKeychain.h"
 #import "XcodeProjectManipulation.h"
 
-static NSString* const kContentful = @"com.contentful.xcode-plugin";
+static NSString* const kContentful      = @"com.contentful.xcode-plugin";
+static NSString* const kSegmentToken    = @"yjld8PYNsAZlgJjsFdF96h5FWgm31NBk";
 
 @interface ContentTypeSelectionDialog ()
 
@@ -30,6 +32,8 @@ static NSString* const kContentful = @"com.contentful.xcode-plugin";
 @property (weak) IBOutlet NSMenu *spaceSelectionMenu;
 @property (weak) IBOutlet NSButton *targetSelection;
 @property (weak) IBOutlet NSMenu *targetSelectionMenu;
+@property (strong) BBUSegmentTracker* tracker;
+@property (weak) IBOutlet NSButton *trackingOptOut;
 
 @end
 
@@ -96,12 +100,17 @@ static NSString* const kContentful = @"com.contentful.xcode-plugin";
     self = [super initWithWindowNibName:NSStringFromClass(self.class)];
     if (self) {
         self.projectManipulation = [XcodeProjectManipulation new];
+        self.tracker = [[BBUSegmentTracker alloc] initWithToken:kSegmentToken];
     }
     return self;
 }
 
 -(void)performLogin {
-    self.client = [[CMAClient alloc] initWithAccessToken:self.accessTokenTextField.stringValue];
+    CDAConfiguration* configuration = [CDAConfiguration defaultConfiguration];
+    configuration.userAgent = @"Contentful Xcode Plugin/0.3";
+
+    self.client = [[CMAClient alloc] initWithAccessToken:self.accessTokenTextField.stringValue
+                                           configuration:configuration];
 
     [self.client fetchAllSpacesWithSuccess:^(CDAResponse *response, CDAArray *array) {
         [SSKeychain setPassword:self.accessTokenTextField.stringValue
@@ -141,6 +150,10 @@ static NSString* const kContentful = @"com.contentful.xcode-plugin";
 }
 
 - (IBAction)generateClicked:(NSButton *)sender {
+    if (self.trackingOptOut.state == NSOnState) {
+        [self.tracker trackEvent:NSStringFromSelector(_cmd) withProperties:@{} completionHandler:nil];
+    }
+
     NSString* generatorBinaryPath = [[NSBundle bundleForClass:self.class] pathForResource:@"ContentfulModelGenerator" ofType:nil];
 
     NSTask* task = [NSTask new];

@@ -9,7 +9,10 @@
 import Foundation
 
 func generate(spaceKey: String, accessToken: String) {
-    let client = CMAClient(accessToken: accessToken)
+    let configuration = CDAConfiguration.defaultConfiguration()
+    configuration.userAgent = "ContentfulModelGenerator/0.3"
+
+    let client = CMAClient(accessToken: accessToken, configuration:configuration)
     let generator = ContentfulModelGenerator(client: client, spaceKey: spaceKey)
 
     var waiting = true
