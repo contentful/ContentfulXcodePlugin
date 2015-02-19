@@ -17,6 +17,7 @@
 #import "XcodeProjectManipulation.h"
 
 static NSString* const kContentful      = @"com.contentful.xcode-plugin";
+static NSString* const kTrackingOptOut  = @"com.contentful.trackingOptOut";
 static NSString* const kSegmentToken    = @"yjld8PYNsAZlgJjsFdF96h5FWgm31NBk";
 
 @interface ContentTypeSelectionDialog ()
@@ -138,6 +139,8 @@ static NSString* const kSegmentToken    = @"yjld8PYNsAZlgJjsFdF96h5FWgm31NBk";
 -(void)windowDidLoad {
     [super windowDidLoad];
 
+    self.trackingOptOut.state = [[NSUserDefaults standardUserDefaults] boolForKey:kTrackingOptOut] ? NSOffState : NSOnState;
+
     self.accessTokenTextField.stringValue = [SSKeychain passwordForService:kContentful
                                                                    account:kContentful] ?: @"";
     [self performLogin];
@@ -200,6 +203,10 @@ static NSString* const kSegmentToken    = @"yjld8PYNsAZlgJjsFdF96h5FWgm31NBk";
 
 - (IBAction)obtainAccessTokenClicked:(NSButton*)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://www.contentful.com/developers/documentation/content-management-api/http/#getting-started"]];
+}
+
+- (IBAction)trackingOptOutClicked:(NSButton*)sender {
+    [[NSUserDefaults standardUserDefaults] setBool:sender.state == NSOffState forKey:kTrackingOptOut];
 }
 
 @end
