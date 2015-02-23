@@ -27,6 +27,18 @@
     [self addFileReference:reference toBuildPhase:@"Sources" target:target];
 }
 
+-(void)addModelFileAtPath:(NSString *)filePath toTarget:(id<PBXTarget>)target {
+    id<PBXGroup> group = [self groupNamed:@"Resources" parentGroup:nil];
+
+    for (id<PBXFileReference> child in group.children) {
+        if ([child.name isEqualToString:filePath.lastPathComponent]) {
+            return;
+        }
+    }
+
+    [self addFileAtPath:filePath toTarget:target];
+}
+
 -(id<PBXProject>)project {
     NSString* workspacePath = [self workspacePath];
     for (NSString* file in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:workspacePath

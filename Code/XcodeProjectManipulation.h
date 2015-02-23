@@ -12,6 +12,7 @@
 @interface XcodeProjectManipulation : NSObject
 
 -(void)addFileAtPath:(NSString *)filePath toTarget:(id<PBXTarget>)target;
+-(void)addModelFileAtPath:(NSString *)filePath toTarget:(id<PBXTarget>)target;
 -(NSArray*)targets;
 -(NSString*)workspacePath;
 

@@ -157,6 +157,25 @@ static NSString* const kSegmentToken    = @"yjld8PYNsAZlgJjsFdF96h5FWgm31NBk";
         [self.tracker trackEvent:NSStringFromSelector(_cmd) withProperties:@{} completionHandler:nil];
     }
 
+    NSString* potentialPath = [[self.projectManipulation workspacePath] stringByAppendingPathComponent:@"ContentfulModel.xcdatamodeld"];
+
+    if ([[NSFileManager defaultManager] fileExistsAtPath:potentialPath]) {
+        NSAlert* question = [NSAlert alertWithMessageText:NSLocalizedString(@"Data model already exists", nil) defaultButton:NSLocalizedString(@"Overwrite existing model", nil) alternateButton:NSLocalizedString(@"Cancel", nil) otherButton:NSLocalizedString(@"Create new model version", nil) informativeTextWithFormat:NSLocalizedString(@"A data model already exists at %@, do you want to overwrite it or generate a new version of the existing model?", nil), potentialPath];
+        NSModalResponse response = [question runModal];
+
+        switch (response) {
+            case NSAlertDefaultReturn:
+                [[NSFileManager defaultManager] removeItemAtPath:potentialPath error:nil];
+                break;
+
+            case NSAlertOtherReturn:
+                break;
+
+            default:
+                return;
+        }
+    }
+
     NSString* generatorBinaryPath = [[NSBundle bundleForClass:self.class] pathForResource:@"ContentfulModelGenerator" ofType:nil];
 
     NSTask* task = [NSTask new];
@@ -178,7 +197,6 @@ static NSString* const kSegmentToken    = @"yjld8PYNsAZlgJjsFdF96h5FWgm31NBk";
             [DJProgressHUD dismiss];
         });
 
-        NSString* potentialPath = [[self.projectManipulation workspacePath] stringByAppendingPathComponent:@"ContentfulModel.xcdatamodeld"];
         BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:potentialPath];
 
         dispatch_sync(dispatch_get_main_queue(), ^{
@@ -189,7 +207,7 @@ static NSString* const kSegmentToken    = @"yjld8PYNsAZlgJjsFdF96h5FWgm31NBk";
                 alert.messageText = [NSString stringWithFormat:NSLocalizedString(@"Could not generate data model: %@", nil), errorString];
                 [alert runModal];
             } else {
-                [self.projectManipulation addFileAtPath:potentialPath toTarget:self.selectedTarget];
+                [self.projectManipulation addModelFileAtPath:potentialPath toTarget:self.selectedTarget];
             }
             
             [self closeSheet];
