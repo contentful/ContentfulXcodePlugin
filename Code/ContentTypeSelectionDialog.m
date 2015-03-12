@@ -18,7 +18,7 @@
 
 static NSString* const kContentful      = @"com.contentful.xcode-plugin";
 static NSString* const kTrackingOptOut  = @"com.contentful.trackingOptOut";
-static NSString* const kSegmentToken    = @"yjld8PYNsAZlgJjsFdF96h5FWgm31NBk";
+static NSString* const kSegmentToken    = @"9hgd0ujgqy";
 
 @interface ContentTypeSelectionDialog ()
 
@@ -154,7 +154,7 @@ static NSString* const kSegmentToken    = @"yjld8PYNsAZlgJjsFdF96h5FWgm31NBk";
 
 - (IBAction)generateClicked:(NSButton *)sender {
     if (self.trackingOptOut.state == NSOnState) {
-        [self.tracker trackEvent:NSStringFromSelector(_cmd) withProperties:@{} completionHandler:nil];
+        [self.tracker trackEvent:@"Generated Core Data model" withProperties:@{} completionHandler:nil];
     }
 
     NSString* potentialPath = [[self.projectManipulation workspacePath] stringByAppendingPathComponent:@"ContentfulModel.xcdatamodeld"];
