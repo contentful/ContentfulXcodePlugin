@@ -331,6 +331,7 @@
 		A1DB6A441A10CE9500F6E5C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Contentful GmbH";
 				TargetAttributes = {
