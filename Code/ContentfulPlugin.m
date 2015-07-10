@@ -45,15 +45,21 @@ static ContentfulPlugin *sharedPlugin;
     if (self = [super init]) {
         self.bundle = plugin;
 
-        NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Product"];
-        if (menuItem) {
-            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-            NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Generate Model from Contentful..." action:@selector(doMenuAction) keyEquivalent:@""];
-            [actionMenuItem setTarget:self];
-            [[menuItem submenu] addItem:actionMenuItem];
-        }
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self createMenuItem];
+        }];
     }
     return self;
+}
+
+- (void)createMenuItem {
+    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Product"];
+    if (menuItem) {
+        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
+        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Generate Model from Contentful..." action:@selector(doMenuAction) keyEquivalent:@""];
+        [actionMenuItem setTarget:self];
+        [[menuItem submenu] addItem:actionMenuItem];
+    }
 }
 
 - (void)doMenuAction
