@@ -41,13 +41,15 @@
 
 -(id<PBXProject>)project {
     NSString* workspacePath = [self workspacePath];
-    for (NSString* file in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:workspacePath
-                                                                               error:nil]) {
+    NSDirectoryEnumerator* enumerator = [[NSFileManager defaultManager] enumeratorAtPath:workspacePath];
+
+    for (NSString* file in enumerator) {
         if ([file.pathExtension isEqualToString:@"xcodeproj"]) {
             NSString* fullPath = [workspacePath stringByAppendingPathComponent:file];
             return [objc_getClass("PBXProject") projectWithFile:fullPath];
         }
     }
+
     return nil;
 }
 
