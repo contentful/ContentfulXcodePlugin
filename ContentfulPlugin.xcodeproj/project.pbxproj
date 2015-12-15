@@ -19,25 +19,28 @@
 		A13C06871A2626A400C8F657 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C06841A2626A400C8F657 /* SSKeychain.m */; };
 		A13C06881A2626A400C8F657 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C06861A2626A400C8F657 /* SSKeychainQuery.m */; };
 		A1604E1F1A14DC1B003F916D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E1E1A14DC1B003F916D /* main.swift */; };
-		A1604E271A14EE37003F916D /* EntitySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E241A14EE37003F916D /* EntitySerializer.swift */; };
-		A1604E281A14EE37003F916D /* ModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E251A14EE37003F916D /* ModelSerializer.swift */; };
-		A1604E291A14EE37003F916D /* XMLTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E261A14EE37003F916D /* XMLTools.swift */; };
-		A1604E2E1A14EE4C003F916D /* ECoXiS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E2A1A14EE4C003F916D /* ECoXiS.swift */; };
-		A1604E2F1A14EE4C003F916D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E2B1A14EE4C003F916D /* Model.swift */; };
-		A1604E301A14EE4C003F916D /* StringCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E2C1A14EE4C003F916D /* StringCreation.swift */; };
-		A1604E311A14EE4C003F916D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E2D1A14EE4C003F916D /* Utilities.swift */; };
-		A1604E371A14EE60003F916D /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E321A14EE60003F916D /* Command.swift */; };
-		A1604E381A14EE60003F916D /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E331A14EE60003F916D /* FileHandle.swift */; };
-		A1604E391A14EE60003F916D /* Pipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E341A14EE60003F916D /* Pipes.swift */; };
-		A1604E3A1A14EE60003F916D /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E351A14EE60003F916D /* Stream.swift */; };
-		A1604E3B1A14EE60003F916D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E361A14EE60003F916D /* String.swift */; };
 		A1604E3C1A14EF1B003F916D /* ContentfulModelGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */; };
-		A1604E441A14FD1D003F916D /* ARGV.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E401A14FD1D003F916D /* ARGV.swift */; };
-		A1604E461A14FD1D003F916D /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E421A14FD1D003F916D /* HelpCommand.swift */; };
-		A1604E471A14FD1D003F916D /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1604E431A14FD1D003F916D /* Manager.swift */; };
 		A1604E481A15027C003F916D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
+		A1B77EAB1C2076B000948DE5 /* ArgumentConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EA31C2076B000948DE5 /* ArgumentConvertible.swift */; };
+		A1B77EAC1C2076B000948DE5 /* ArgumentDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EA41C2076B000948DE5 /* ArgumentDescription.swift */; };
+		A1B77EAD1C2076B000948DE5 /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EA51C2076B000948DE5 /* ArgumentParser.swift */; };
+		A1B77EAE1C2076B000948DE5 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EA61C2076B000948DE5 /* Command.swift */; };
+		A1B77EAF1C2076B000948DE5 /* CommandRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EA71C2076B000948DE5 /* CommandRunner.swift */; };
+		A1B77EB11C2076B000948DE5 /* CommandType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EA91C2076B000948DE5 /* CommandType.swift */; };
+		A1B77EB21C2076B000948DE5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EAA1C2076B000948DE5 /* Group.swift */; };
+		A1B77EB61C20778100948DE5 /* EntitySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EB31C20778100948DE5 /* EntitySerializer.swift */; };
+		A1B77EB71C20778100948DE5 /* ModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EB41C20778100948DE5 /* ModelSerializer.swift */; };
+		A1B77EB81C20778100948DE5 /* XMLTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EB51C20778100948DE5 /* XMLTools.swift */; };
+		A1B77EBD1C20779400948DE5 /* ECoXiS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EB91C20779400948DE5 /* ECoXiS.swift */; };
+		A1B77EBE1C20779400948DE5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EBA1C20779400948DE5 /* Model.swift */; };
+		A1B77EBF1C20779400948DE5 /* StringCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EBB1C20779400948DE5 /* StringCreation.swift */; };
+		A1B77EC01C20779400948DE5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EBC1C20779400948DE5 /* Utilities.swift */; };
+		A1B77EC41C207B7C00948DE5 /* FileHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EC31C207B7C00948DE5 /* FileHandle.swift */; };
+		A1B77EC91C207B8C00948DE5 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EC51C207B8C00948DE5 /* Files.swift */; };
+		A1B77ECA1C207B8C00948DE5 /* Pipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EC61C207B8C00948DE5 /* Pipes.swift */; };
+		A1B77ECB1C207B8C00948DE5 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EC71C207B8C00948DE5 /* Stream.swift */; };
+		A1B77ECC1C207B8C00948DE5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B77EC81C207B8C00948DE5 /* String.swift */; };
 		A1CD7B6B1A24CE61009CF393 /* XcodeProjectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CD7B691A24CE4E009CF393 /* XcodeProjectManipulation.m */; };
-		A1D7A9FB1A1F7F6600C00299 /* Command_.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7A9FA1A1F7F6600C00299 /* Command_.swift */; };
 		A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */; };
 		A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */; };
 		A1DB6A5A1A10CE9500F6E5C5 /* ContentfulPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A591A10CE9500F6E5C5 /* ContentfulPlugin.m */; };
@@ -79,25 +82,28 @@
 		A1604DDE1A137085003F916D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A1604E1C1A14DC1B003F916D /* ContentfulModelGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ContentfulModelGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1604E1E1A14DC1B003F916D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		A1604E241A14EE37003F916D /* EntitySerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntitySerializer.swift; path = ../../vendor/ManagedObjectModelSerializer/Code/EntitySerializer.swift; sourceTree = "<group>"; };
-		A1604E251A14EE37003F916D /* ModelSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelSerializer.swift; path = ../../vendor/ManagedObjectModelSerializer/Code/ModelSerializer.swift; sourceTree = "<group>"; };
-		A1604E261A14EE37003F916D /* XMLTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLTools.swift; path = ../../vendor/ManagedObjectModelSerializer/Code/XMLTools.swift; sourceTree = "<group>"; };
-		A1604E2A1A14EE4C003F916D /* ECoXiS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ECoXiS.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/ECoXiS.swift; sourceTree = "<group>"; };
-		A1604E2B1A14EE4C003F916D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/Model.swift; sourceTree = "<group>"; };
-		A1604E2C1A14EE4C003F916D /* StringCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringCreation.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/StringCreation.swift; sourceTree = "<group>"; };
-		A1604E2D1A14EE4C003F916D /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/Utilities.swift; sourceTree = "<group>"; };
-		A1604E321A14EE60003F916D /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/Command.swift; sourceTree = "<group>"; };
-		A1604E331A14EE60003F916D /* FileHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHandle.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/FileHandle.swift; sourceTree = "<group>"; };
-		A1604E341A14EE60003F916D /* Pipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pipes.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/Pipes.swift; sourceTree = "<group>"; };
-		A1604E351A14EE60003F916D /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/Stream.swift; sourceTree = "<group>"; };
-		A1604E361A14EE60003F916D /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../../vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/String.swift; sourceTree = "<group>"; };
 		A1604E3E1A14FB51003F916D /* ContentfulModelGenerator-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContentfulModelGenerator-Bridge.h"; sourceTree = "<group>"; };
-		A1604E401A14FD1D003F916D /* ARGV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARGV.swift; path = vendor/CLIKit/CLIKit/ARGV.swift; sourceTree = SOURCE_ROOT; };
-		A1604E421A14FD1D003F916D /* HelpCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpCommand.swift; path = vendor/CLIKit/CLIKit/HelpCommand.swift; sourceTree = SOURCE_ROOT; };
-		A1604E431A14FD1D003F916D /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = vendor/CLIKit/CLIKit/Manager.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EA31C2076B000948DE5 /* ArgumentConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgumentConvertible.swift; path = vendor/CLIKit/Sources/ArgumentConvertible.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EA41C2076B000948DE5 /* ArgumentDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgumentDescription.swift; path = vendor/CLIKit/Sources/ArgumentDescription.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EA51C2076B000948DE5 /* ArgumentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgumentParser.swift; path = vendor/CLIKit/Sources/ArgumentParser.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EA61C2076B000948DE5 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = vendor/CLIKit/Sources/Command.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EA71C2076B000948DE5 /* CommandRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandRunner.swift; path = vendor/CLIKit/Sources/CommandRunner.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EA91C2076B000948DE5 /* CommandType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandType.swift; path = vendor/CLIKit/Sources/CommandType.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EAA1C2076B000948DE5 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = vendor/CLIKit/Sources/Group.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EB31C20778100948DE5 /* EntitySerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntitySerializer.swift; path = vendor/ManagedObjectModelSerializer/Code/EntitySerializer.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EB41C20778100948DE5 /* ModelSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelSerializer.swift; path = vendor/ManagedObjectModelSerializer/Code/ModelSerializer.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EB51C20778100948DE5 /* XMLTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLTools.swift; path = vendor/ManagedObjectModelSerializer/Code/XMLTools.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EB91C20779400948DE5 /* ECoXiS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ECoXiS.swift; path = vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/ECoXiS.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EBA1C20779400948DE5 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/Model.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EBB1C20779400948DE5 /* StringCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringCreation.swift; path = vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/StringCreation.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EBC1C20779400948DE5 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = vendor/ManagedObjectModelSerializer/vendor/ECoXiS/ECoXiS/Utilities.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EC31C207B7C00948DE5 /* FileHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHandle.swift; path = vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/FileHandle.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EC51C207B8C00948DE5 /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Files.swift; path = vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/Files.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EC61C207B8C00948DE5 /* Pipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pipes.swift; path = vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/Pipes.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EC71C207B8C00948DE5 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/Stream.swift; sourceTree = SOURCE_ROOT; };
+		A1B77EC81C207B8C00948DE5 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = vendor/ManagedObjectModelSerializer/vendor/SwiftShell/SwiftShell/String.swift; sourceTree = SOURCE_ROOT; };
 		A1CD7B681A24CE4E009CF393 /* XcodeProjectManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeProjectManipulation.h; sourceTree = "<group>"; };
 		A1CD7B691A24CE4E009CF393 /* XcodeProjectManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeProjectManipulation.m; sourceTree = "<group>"; };
-		A1D7A9FA1A1F7F6600C00299 /* Command_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command_.swift; sourceTree = "<group>"; };
 		A1DB6A4C1A10CE9500F6E5C5 /* ContentfulPlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContentfulPlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -177,18 +183,18 @@
 		A1604E231A14EE1E003F916D /* MOMSerializer */ = {
 			isa = PBXGroup;
 			children = (
-				A1604E321A14EE60003F916D /* Command.swift */,
-				A1604E2A1A14EE4C003F916D /* ECoXiS.swift */,
-				A1604E241A14EE37003F916D /* EntitySerializer.swift */,
-				A1604E331A14EE60003F916D /* FileHandle.swift */,
-				A1604E2B1A14EE4C003F916D /* Model.swift */,
-				A1604E251A14EE37003F916D /* ModelSerializer.swift */,
-				A1604E341A14EE60003F916D /* Pipes.swift */,
-				A1604E351A14EE60003F916D /* Stream.swift */,
-				A1604E361A14EE60003F916D /* String.swift */,
-				A1604E2C1A14EE4C003F916D /* StringCreation.swift */,
-				A1604E2D1A14EE4C003F916D /* Utilities.swift */,
-				A1604E261A14EE37003F916D /* XMLTools.swift */,
+				A1B77EB91C20779400948DE5 /* ECoXiS.swift */,
+				A1B77EB31C20778100948DE5 /* EntitySerializer.swift */,
+				A1B77EC31C207B7C00948DE5 /* FileHandle.swift */,
+				A1B77EC51C207B8C00948DE5 /* Files.swift */,
+				A1B77EBA1C20779400948DE5 /* Model.swift */,
+				A1B77EB41C20778100948DE5 /* ModelSerializer.swift */,
+				A1B77EC61C207B8C00948DE5 /* Pipes.swift */,
+				A1B77EC71C207B8C00948DE5 /* Stream.swift */,
+				A1B77EC81C207B8C00948DE5 /* String.swift */,
+				A1B77EBB1C20779400948DE5 /* StringCreation.swift */,
+				A1B77EBC1C20779400948DE5 /* Utilities.swift */,
+				A1B77EB51C20778100948DE5 /* XMLTools.swift */,
 			);
 			path = MOMSerializer;
 			sourceTree = "<group>";
@@ -196,10 +202,13 @@
 		A1604E3F1A14FD0A003F916D /* CLIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A1604E401A14FD1D003F916D /* ARGV.swift */,
-				A1D7A9FA1A1F7F6600C00299 /* Command_.swift */,
-				A1604E421A14FD1D003F916D /* HelpCommand.swift */,
-				A1604E431A14FD1D003F916D /* Manager.swift */,
+				A1B77EA31C2076B000948DE5 /* ArgumentConvertible.swift */,
+				A1B77EA41C2076B000948DE5 /* ArgumentDescription.swift */,
+				A1B77EA51C2076B000948DE5 /* ArgumentParser.swift */,
+				A1B77EA61C2076B000948DE5 /* Command.swift */,
+				A1B77EA71C2076B000948DE5 /* CommandRunner.swift */,
+				A1B77EA91C2076B000948DE5 /* CommandType.swift */,
+				A1B77EAA1C2076B000948DE5 /* Group.swift */,
 			);
 			name = CLIKit;
 			sourceTree = "<group>";
@@ -411,24 +420,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1604E281A14EE37003F916D /* ModelSerializer.swift in Sources */,
-				A1D7A9FB1A1F7F6600C00299 /* Command_.swift in Sources */,
-				A1604E3B1A14EE60003F916D /* String.swift in Sources */,
-				A1604E271A14EE37003F916D /* EntitySerializer.swift in Sources */,
+				A1B77EBE1C20779400948DE5 /* Model.swift in Sources */,
+				A1B77EB11C2076B000948DE5 /* CommandType.swift in Sources */,
 				A1604E1F1A14DC1B003F916D /* main.swift in Sources */,
-				A1604E2F1A14EE4C003F916D /* Model.swift in Sources */,
+				A1B77EB71C20778100948DE5 /* ModelSerializer.swift in Sources */,
+				A1B77EAE1C2076B000948DE5 /* Command.swift in Sources */,
 				A1604E3C1A14EF1B003F916D /* ContentfulModelGenerator.m in Sources */,
-				A1604E461A14FD1D003F916D /* HelpCommand.swift in Sources */,
-				A1604E471A14FD1D003F916D /* Manager.swift in Sources */,
-				A1604E2E1A14EE4C003F916D /* ECoXiS.swift in Sources */,
-				A1604E371A14EE60003F916D /* Command.swift in Sources */,
-				A1604E301A14EE4C003F916D /* StringCreation.swift in Sources */,
-				A1604E3A1A14EE60003F916D /* Stream.swift in Sources */,
-				A1604E441A14FD1D003F916D /* ARGV.swift in Sources */,
-				A1604E381A14EE60003F916D /* FileHandle.swift in Sources */,
-				A1604E391A14EE60003F916D /* Pipes.swift in Sources */,
-				A1604E311A14EE4C003F916D /* Utilities.swift in Sources */,
-				A1604E291A14EE37003F916D /* XMLTools.swift in Sources */,
+				A1B77EAF1C2076B000948DE5 /* CommandRunner.swift in Sources */,
+				A1B77EB81C20778100948DE5 /* XMLTools.swift in Sources */,
+				A1B77EB21C2076B000948DE5 /* Group.swift in Sources */,
+				A1B77EC01C20779400948DE5 /* Utilities.swift in Sources */,
+				A1B77EAB1C2076B000948DE5 /* ArgumentConvertible.swift in Sources */,
+				A1B77EC91C207B8C00948DE5 /* Files.swift in Sources */,
+				A1B77EBF1C20779400948DE5 /* StringCreation.swift in Sources */,
+				A1B77EBD1C20779400948DE5 /* ECoXiS.swift in Sources */,
+				A1B77EAC1C2076B000948DE5 /* ArgumentDescription.swift in Sources */,
+				A1B77ECA1C207B8C00948DE5 /* Pipes.swift in Sources */,
+				A1B77EC41C207B7C00948DE5 /* FileHandle.swift in Sources */,
+				A1B77EB61C20778100948DE5 /* EntitySerializer.swift in Sources */,
+				A1B77ECC1C207B8C00948DE5 /* String.swift in Sources */,
+				A1B77EAD1C2076B000948DE5 /* ArgumentParser.swift in Sources */,
+				A1B77ECB1C207B8C00948DE5 /* Stream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,9 +8,8 @@ set -o pipefail && xcodebuild -workspace ContentfulPlugin.xcworkspace \
 	-scheme ContentfulModelGenerator 2>/dev/null | xcpretty -c
 
 BUILD="`ls -d $HOME/Library/Developer/Xcode/DerivedData/ContentfulPlugin-*`"
-$BUILD/Build/Products/Debug/ContentfulModelGenerator generate \
-	--spaceKey=a3rsszoo7qqp \
-	--accessToken=$CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN
+$BUILD/Build/Products/Debug/ContentfulModelGenerator \
+	a3rsszoo7qqp $CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN
 
 lint Tests/a3rsszoo7qqp.xml >1.xml
 lint ContentfulModel.xcdatamodeld/ContentfulModel.xcdatamodel/contents >2.xml

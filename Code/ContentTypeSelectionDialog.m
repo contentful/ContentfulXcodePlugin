@@ -179,7 +179,7 @@ static NSString* const kSegmentToken    = @"9hgd0ujgqy";
     NSString* generatorBinaryPath = [[NSBundle bundleForClass:self.class] pathForResource:@"ContentfulModelGenerator" ofType:nil];
 
     NSTask* task = [NSTask new];
-    task.arguments = @[@"generate", [@"--spaceKey=" stringByAppendingString:self.selectedSpace.identifier], [@"--accessToken=" stringByAppendingString:self.accessTokenTextField.stringValue]];
+    task.arguments = @[self.selectedSpace.identifier, self.accessTokenTextField.stringValue];
     task.currentDirectoryPath = [self.projectManipulation workspacePath];
     task.launchPath = generatorBinaryPath;
 
