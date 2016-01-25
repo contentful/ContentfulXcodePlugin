@@ -43,14 +43,21 @@
     NSString* workspacePath = [self workspacePath];
     NSDirectoryEnumerator* enumerator = [[NSFileManager defaultManager] enumeratorAtPath:workspacePath];
 
+    NSMutableDictionary* foundProjects = [@{} mutableCopy];
+
     for (NSString* file in enumerator) {
         if ([file.pathExtension isEqualToString:@"xcodeproj"]) {
             NSString* fullPath = [workspacePath stringByAppendingPathComponent:file];
-            return [objc_getClass("PBXProject") projectWithFile:fullPath];
+            id<PBXProject> project = [objc_getClass("PBXProject") projectWithFile:fullPath];
+
+            NSMutableArray* levelProjects = foundProjects[@(enumerator.level)] ?: [@[] mutableCopy];
+            [levelProjects addObject:project];
+            foundProjects[@(enumerator.level)] = levelProjects;
         }
     }
 
-    return nil;
+    NSArray* levels = [foundProjects.allKeys sortedArrayUsingSelector:@selector(compare:)];
+    return [foundProjects[[levels firstObject]] firstObject];
 }
 
 -(NSArray*)targets {
