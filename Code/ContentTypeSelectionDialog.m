@@ -7,8 +7,6 @@
 //
 
 #import <ContentfulManagementAPI/ContentfulManagementAPI.h>
-#import <ContentfulManagementAPI/CMAArray.h>
-#import <ContentfulManagementAPI/CMAError.h>
 
 #import "BBUSegmentTracker.h"
 #import "ContentTypeSelectionDialog.h"
@@ -41,18 +39,6 @@ static NSString* const kSegmentToken    = @"9hgd0ujgqy";
 #pragma mark -
 
 @implementation ContentTypeSelectionDialog
-
-// TODO: Move this to CMA SDK so that static builds of it can be shared
-
-// Terrible workaround to keep static builds from stripping these classes out.
-+(void)load {
-#ifndef __clang_analyzer__
-    NSArray* classes = @[ [CMAArray class], [CMAError class], [CMASpace class] ];
-    classes = nil;
-#endif
-}
-
-#pragma mark -
 
 - (void)closeSheet {
     [self.window close];

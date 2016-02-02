@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7300D495856BF0FAE98F6E30 /* libPods-ContentfulModelGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBE589617E176DEC1A5A42F /* libPods-ContentfulModelGenerator.a */; };
 		A117BED11A238E4200C53D65 /* ContentfulModelGenerator in Resources */ = {isa = PBXBuildFile; fileRef = A117BED01A238E4200C53D65 /* ContentfulModelGenerator */; };
-		A117BED41A2398D500C53D65 /* ContentfulDeliveryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A117BED21A2398D500C53D65 /* ContentfulDeliveryAPI.framework */; };
-		A117BED51A2398D500C53D65 /* ContentfulManagementAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A117BED31A2398D500C53D65 /* ContentfulManagementAPI.framework */; };
 		A117BED61A23995C00C53D65 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
 		A13C067E1A26014F00C8F657 /* DJActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C06771A26014F00C8F657 /* DJActivityIndicator.m */; };
 		A13C067F1A26014F00C8F657 /* DJBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C06791A26014F00C8F657 /* DJBezierPath.m */; };
@@ -46,7 +43,9 @@
 		A1DB6A5A1A10CE9500F6E5C5 /* ContentfulPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A591A10CE9500F6E5C5 /* ContentfulPlugin.m */; };
 		A1DB6A6E1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DB6A6C1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.m */; };
 		A1DB6A6F1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DB6A6D1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib */; };
+		A1EB3C8E1C5FB3D500B4B645 /* libPods-ContentfulModelGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF77B4A9BA90550AB215F45 /* libPods-ContentfulModelGenerator.a */; };
 		A1FB1CBD1A9647AF00ACE078 /* BBUSegmentTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FB1CBC1A9647AF00ACE078 /* BBUSegmentTracker.m */; };
+		DED7C6CF88A65F0ADA2CFF7B /* libPods-ContentfulModelGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF77B4A9BA90550AB215F45 /* libPods-ContentfulModelGenerator.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,8 +61,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E06AEF55AD3ADD3214D49E8 /* Pods-ContentfulModelGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulModelGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator.debug.xcconfig"; sourceTree = "<group>"; };
-		618BF858B6E4468FF0D7519D /* Pods-ContentfulModelGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulModelGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		3CB8D5FDCA27AB089A758488 /* libPods-ContentfulPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContentfulPlugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CF20D27CF7AAD1D7E583C79 /* Pods-ContentfulPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulPlugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulPlugin/Pods-ContentfulPlugin.release.xcconfig"; sourceTree = "<group>"; };
+		64D05EB3EB92A288E05E68A0 /* Pods-ContentfulPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulPlugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulPlugin/Pods-ContentfulPlugin.debug.xcconfig"; sourceTree = "<group>"; };
 		A117BED01A238E4200C53D65 /* ContentfulModelGenerator */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ContentfulModelGenerator; sourceTree = "<group>"; };
 		A117BED21A2398D500C53D65 /* ContentfulDeliveryAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContentfulDeliveryAPI.framework; path = Resources/ContentfulDeliveryAPI.framework; sourceTree = "<group>"; };
 		A117BED31A2398D500C53D65 /* ContentfulManagementAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContentfulManagementAPI.framework; path = Resources/ContentfulManagementAPI.framework; sourceTree = "<group>"; };
@@ -115,9 +115,12 @@
 		A1DB6A6D1A10DAF100F6E5C5 /* ContentTypeSelectionDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentTypeSelectionDialog.xib; sourceTree = "<group>"; };
 		A1DB6A7D1A10DE0E00F6E5C5 /* ContentfulModelGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentfulModelGenerator.h; sourceTree = "<group>"; };
 		A1DB6A7E1A10DE0E00F6E5C5 /* ContentfulModelGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentfulModelGenerator.m; sourceTree = "<group>"; };
+		A1EB3C8C1C5FB3C700B4B645 /* libPods-ContentfulPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ContentfulPlugin.a"; path = "Pods/../build/Debug/libPods-ContentfulPlugin.a"; sourceTree = "<group>"; };
 		A1FB1CBB1A9647AF00ACE078 /* BBUSegmentTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBUSegmentTracker.h; path = "vendor/segmentio-simple/Pod/Classes/BBUSegmentTracker.h"; sourceTree = SOURCE_ROOT; };
 		A1FB1CBC1A9647AF00ACE078 /* BBUSegmentTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBUSegmentTracker.m; path = "vendor/segmentio-simple/Pod/Classes/BBUSegmentTracker.m"; sourceTree = SOURCE_ROOT; };
-		FFBE589617E176DEC1A5A42F /* libPods-ContentfulModelGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContentfulModelGenerator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAF77B4A9BA90550AB215F45 /* libPods-ContentfulModelGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContentfulModelGenerator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C48FF99824D2B350DD74FB8E /* Pods-ContentfulModelGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulModelGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator.debug.xcconfig"; sourceTree = "<group>"; };
+		DD57C74B0474C375139CE7F5 /* Pods-ContentfulModelGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContentfulModelGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1604E481A15027C003F916D /* SystemConfiguration.framework in Frameworks */,
-				7300D495856BF0FAE98F6E30 /* libPods-ContentfulModelGenerator.a in Frameworks */,
+				DED7C6CF88A65F0ADA2CFF7B /* libPods-ContentfulModelGenerator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,10 +137,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EB3C8E1C5FB3D500B4B645 /* libPods-ContentfulModelGenerator.a in Frameworks */,
 				A117BED61A23995C00C53D65 /* SystemConfiguration.framework in Frameworks */,
-				A117BED41A2398D500C53D65 /* ContentfulDeliveryAPI.framework in Frameworks */,
 				A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */,
-				A117BED51A2398D500C53D65 /* ContentfulManagementAPI.framework in Frameworks */,
 				A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,11 +147,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D3F0CB4DDDF568C08C00C43 /* Pods */ = {
+		65297FDFBB249D19CC216C1D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1E06AEF55AD3ADD3214D49E8 /* Pods-ContentfulModelGenerator.debug.xcconfig */,
-				618BF858B6E4468FF0D7519D /* Pods-ContentfulModelGenerator.release.xcconfig */,
+				C48FF99824D2B350DD74FB8E /* Pods-ContentfulModelGenerator.debug.xcconfig */,
+				DD57C74B0474C375139CE7F5 /* Pods-ContentfulModelGenerator.release.xcconfig */,
+				64D05EB3EB92A288E05E68A0 /* Pods-ContentfulPlugin.debug.xcconfig */,
+				5CF20D27CF7AAD1D7E583C79 /* Pods-ContentfulPlugin.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -218,7 +222,7 @@
 			children = (
 				A1DB6A531A10CE9500F6E5C5 /* Code */,
 				A1DB6A4E1A10CE9500F6E5C5 /* Frameworks */,
-				5D3F0CB4DDDF568C08C00C43 /* Pods */,
+				65297FDFBB249D19CC216C1D /* Pods */,
 				A1DB6A4D1A10CE9500F6E5C5 /* Products */,
 				A1DB6A621A10D87000F6E5C5 /* Resources */,
 				A1DB6A541A10CE9500F6E5C5 /* Supporting Files */,
@@ -237,12 +241,14 @@
 		A1DB6A4E1A10CE9500F6E5C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1EB3C8C1C5FB3C700B4B645 /* libPods-ContentfulPlugin.a */,
 				A1DB6A4F1A10CE9500F6E5C5 /* AppKit.framework */,
 				A117BED21A2398D500C53D65 /* ContentfulDeliveryAPI.framework */,
 				A117BED31A2398D500C53D65 /* ContentfulManagementAPI.framework */,
 				A1DB6A511A10CE9500F6E5C5 /* Foundation.framework */,
 				A1604DDE1A137085003F916D /* SystemConfiguration.framework */,
-				FFBE589617E176DEC1A5A42F /* libPods-ContentfulModelGenerator.a */,
+				BAF77B4A9BA90550AB215F45 /* libPods-ContentfulModelGenerator.a */,
+				3CB8D5FDCA27AB089A758488 /* libPods-ContentfulPlugin.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -302,11 +308,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1604E221A14DC1B003F916D /* Build configuration list for PBXNativeTarget "ContentfulModelGenerator" */;
 			buildPhases = (
-				0D966649C1E6370D646DA68A /* Check Pods Manifest.lock */,
+				F10FD8B23F40C05FDA50EFF9 /* Check Pods Manifest.lock */,
 				A1604E181A14DC1B003F916D /* Sources */,
 				A1604E191A14DC1B003F916D /* Frameworks */,
 				A1604E1A1A14DC1B003F916D /* CopyFiles */,
-				17100103AB0AFF4B3762D562 /* Copy Pods Resources */,
+				5055E2B6320CC2AD8B46BE3B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,9 +327,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1DB6A5D1A10CE9500F6E5C5 /* Build configuration list for PBXNativeTarget "ContentfulPlugin" */;
 			buildPhases = (
+				220D6A4F6AF6A0CA193819EC /* Check Pods Manifest.lock */,
 				A1DB6A481A10CE9500F6E5C5 /* Sources */,
 				A1DB6A491A10CE9500F6E5C5 /* Resources */,
 				A1DB6A4A1A10CE9500F6E5C5 /* Frameworks */,
+				DD207DAFB79E2E89C47446B6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -383,7 +391,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D966649C1E6370D646DA68A /* Check Pods Manifest.lock */ = {
+		220D6A4F6AF6A0CA193819EC /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,7 +406,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		17100103AB0AFF4B3762D562 /* Copy Pods Resources */ = {
+		5055E2B6320CC2AD8B46BE3B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,6 +419,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD207DAFB79E2E89C47446B6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContentfulPlugin/Pods-ContentfulPlugin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F10FD8B23F40C05FDA50EFF9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -466,7 +504,7 @@
 /* Begin XCBuildConfiguration section */
 		A1604E201A14DC1B003F916D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E06AEF55AD3ADD3214D49E8 /* Pods-ContentfulModelGenerator.debug.xcconfig */;
+			baseConfigurationReference = C48FF99824D2B350DD74FB8E /* Pods-ContentfulModelGenerator.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,7 +524,7 @@
 		};
 		A1604E211A14DC1B003F916D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 618BF858B6E4468FF0D7519D /* Pods-ContentfulModelGenerator.release.xcconfig */;
+			baseConfigurationReference = DD57C74B0474C375139CE7F5 /* Pods-ContentfulModelGenerator.release.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -574,6 +612,7 @@
 		};
 		A1DB6A5E1A10CE9500F6E5C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64D05EB3EB92A288E05E68A0 /* Pods-ContentfulPlugin.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
@@ -590,6 +629,7 @@
 				);
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.contentful.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -600,6 +640,7 @@
 		};
 		A1DB6A5F1A10CE9500F6E5C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CF20D27CF7AAD1D7E583C79 /* Pods-ContentfulPlugin.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
@@ -616,6 +657,7 @@
 				);
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.contentful.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
