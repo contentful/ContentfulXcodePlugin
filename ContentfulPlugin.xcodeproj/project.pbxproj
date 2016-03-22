@@ -515,6 +515,18 @@
 					"$(inherited)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-l\"AFNetworking\"",
+					"-l\"ContentfulDeliveryAPI\"",
+					"-l\"ContentfulManagementAPI\"",
+					"-l\"ISO8601DateFormatter\"",
+					"-framework",
+					"\"CoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "Code/ContentfulModelGenerator-Bridge.h";
@@ -532,6 +544,18 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-l\"AFNetworking\"",
+					"-l\"ContentfulDeliveryAPI\"",
+					"-l\"ContentfulManagementAPI\"",
+					"-l\"ISO8601DateFormatter\"",
+					"-framework",
+					"\"CoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "Code/ContentfulModelGenerator-Bridge.h";
