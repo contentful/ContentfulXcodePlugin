@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FA64E08D8105BAEBAC8C5B /* libPods-ContentfulPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB8D5FDCA27AB089A758488 /* libPods-ContentfulPlugin.a */; };
 		A117BED11A238E4200C53D65 /* ContentfulModelGenerator in Resources */ = {isa = PBXBuildFile; fileRef = A117BED01A238E4200C53D65 /* ContentfulModelGenerator */; };
 		A117BED61A23995C00C53D65 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
 		A13C067E1A26014F00C8F657 /* DJActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C06771A26014F00C8F657 /* DJActivityIndicator.m */; };
@@ -141,6 +142,7 @@
 				A117BED61A23995C00C53D65 /* SystemConfiguration.framework in Frameworks */,
 				A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */,
 				A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */,
+				07FA64E08D8105BAEBAC8C5B /* libPods-ContentfulPlugin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,11 +310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1604E221A14DC1B003F916D /* Build configuration list for PBXNativeTarget "ContentfulModelGenerator" */;
 			buildPhases = (
-				F10FD8B23F40C05FDA50EFF9 /* Check Pods Manifest.lock */,
+				F10FD8B23F40C05FDA50EFF9 /* 📦 Check Pods Manifest.lock */,
 				A1604E181A14DC1B003F916D /* Sources */,
 				A1604E191A14DC1B003F916D /* Frameworks */,
 				A1604E1A1A14DC1B003F916D /* CopyFiles */,
-				5055E2B6320CC2AD8B46BE3B /* Copy Pods Resources */,
+				5055E2B6320CC2AD8B46BE3B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -327,11 +329,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1DB6A5D1A10CE9500F6E5C5 /* Build configuration list for PBXNativeTarget "ContentfulPlugin" */;
 			buildPhases = (
-				220D6A4F6AF6A0CA193819EC /* Check Pods Manifest.lock */,
+				220D6A4F6AF6A0CA193819EC /* 📦 Check Pods Manifest.lock */,
 				A1DB6A481A10CE9500F6E5C5 /* Sources */,
 				A1DB6A491A10CE9500F6E5C5 /* Resources */,
 				A1DB6A4A1A10CE9500F6E5C5 /* Frameworks */,
-				DD207DAFB79E2E89C47446B6 /* Copy Pods Resources */,
+				DD207DAFB79E2E89C47446B6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -391,14 +393,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		220D6A4F6AF6A0CA193819EC /* Check Pods Manifest.lock */ = {
+		220D6A4F6AF6A0CA193819EC /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,14 +408,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5055E2B6320CC2AD8B46BE3B /* Copy Pods Resources */ = {
+		5055E2B6320CC2AD8B46BE3B /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,14 +423,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContentfulModelGenerator/Pods-ContentfulModelGenerator-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD207DAFB79E2E89C47446B6 /* Copy Pods Resources */ = {
+		DD207DAFB79E2E89C47446B6 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,14 +438,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContentfulPlugin/Pods-ContentfulPlugin-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F10FD8B23F40C05FDA50EFF9 /* Check Pods Manifest.lock */ = {
+		F10FD8B23F40C05FDA50EFF9 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,18 +517,6 @@
 					"$(inherited)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				OTHER_LDFLAGS = (
-					"-l\"AFNetworking\"",
-					"-l\"ContentfulDeliveryAPI\"",
-					"-l\"ContentfulManagementAPI\"",
-					"-l\"ISO8601DateFormatter\"",
-					"-framework",
-					"\"CoreServices\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "Code/ContentfulModelGenerator-Bridge.h";
@@ -544,18 +534,6 @@
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				OTHER_LDFLAGS = (
-					"-l\"AFNetworking\"",
-					"-l\"ContentfulDeliveryAPI\"",
-					"-l\"ContentfulManagementAPI\"",
-					"-l\"ISO8601DateFormatter\"",
-					"-framework",
-					"\"CoreServices\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "Code/ContentfulModelGenerator-Bridge.h";
