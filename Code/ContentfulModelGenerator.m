@@ -265,16 +265,22 @@
 
                     NSEntityDescription* destination = relation.destinationEntity;
                     NSRelationshipDescription* inverse = nil;
+                    NSString* inverseName = [relation.name stringByAppendingString:@"Inverse"];
 
                     for (NSRelationshipDescription* r in destination.relationshipsByName.allValues) {
                         if (r.destinationEntity == entity && r.inverseRelationship == nil) {
                             inverse = r;
                         }
+
+                        if ([r.name isEqualToString:inverseName]) {
+                            inverseName = [NSString stringWithFormat:@"%@_%@_Inverse",
+                                           relation.name, entity.name];
+                        }
                     }
 
                     if (!inverse) {
                         inverse = [NSRelationshipDescription new];
-                        inverse.name = [relation.name stringByAppendingString:@"Inverse"];
+                        inverse.name = inverseName;
                         inverse.optional = YES;
                         inverse.destinationEntity = entity;
 
