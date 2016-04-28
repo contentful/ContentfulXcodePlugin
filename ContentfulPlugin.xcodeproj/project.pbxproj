@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07FA64E08D8105BAEBAC8C5B /* libPods-ContentfulPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB8D5FDCA27AB089A758488 /* libPods-ContentfulPlugin.a */; };
 		A117BED11A238E4200C53D65 /* ContentfulModelGenerator in Resources */ = {isa = PBXBuildFile; fileRef = A117BED01A238E4200C53D65 /* ContentfulModelGenerator */; };
 		A117BED61A23995C00C53D65 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1604DDE1A137085003F916D /* SystemConfiguration.framework */; };
 		A13C067E1A26014F00C8F657 /* DJActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A13C06771A26014F00C8F657 /* DJActivityIndicator.m */; };
@@ -142,7 +141,6 @@
 				A117BED61A23995C00C53D65 /* SystemConfiguration.framework in Frameworks */,
 				A1DB6A501A10CE9500F6E5C5 /* AppKit.framework in Frameworks */,
 				A1DB6A521A10CE9500F6E5C5 /* Foundation.framework in Frameworks */,
-				07FA64E08D8105BAEBAC8C5B /* libPods-ContentfulPlugin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +612,7 @@
 		};
 		A1DB6A5E1A10CE9500F6E5C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64D05EB3EB92A288E05E68A0 /* Pods-ContentfulPlugin.debug.xcconfig */;
+			baseConfigurationReference = DD57C74B0474C375139CE7F5 /* Pods-ContentfulModelGenerator.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
@@ -642,7 +640,7 @@
 		};
 		A1DB6A5F1A10CE9500F6E5C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CF20D27CF7AAD1D7E583C79 /* Pods-ContentfulPlugin.release.xcconfig */;
+			baseConfigurationReference = DD57C74B0474C375139CE7F5 /* Pods-ContentfulModelGenerator.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
