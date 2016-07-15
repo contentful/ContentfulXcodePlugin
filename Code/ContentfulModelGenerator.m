@@ -124,7 +124,7 @@
     NSMutableArray* properties = [@[] mutableCopy];
 
     for (CMAField* field in contentType.fields) {
-        if (field.disabled) {
+        if (field.disabled || field.omitted) {
             continue;
         }
 
