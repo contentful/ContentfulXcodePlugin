@@ -17,23 +17,23 @@ PODS:
   - AFNetworking/Reachability (2.5.4)
   - AFNetworking/Security (2.5.4)
   - AFNetworking/Serialization (2.5.4)
-  - ContentfulDeliveryAPI (1.9.3):
+  - ContentfulDeliveryAPI (1.10.3):
     - AFNetworking (~> 2.5.3)
-    - ISO8601DateFormatter
-  - ContentfulManagementAPI (0.5.2):
-    - ContentfulDeliveryAPI (~> 1.9.3)
+    - ISO8601DateFormatter (= 0.7)
+  - ContentfulManagementAPI (0.8.0):
+    - ContentfulDeliveryAPI (~> 1.10.3)
   - ISO8601DateFormatter (0.7)
 
 DEPENDENCIES:
-  - ContentfulDeliveryAPI (~> 1.9.0)
-  - ContentfulManagementAPI (~> 0.5.2)
+  - ContentfulDeliveryAPI (~> 1.10.3)
+  - ContentfulManagementAPI (~> 0.8.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  ContentfulDeliveryAPI: c626f488a9ca53c2f07029593760cdd2c66b9713
-  ContentfulManagementAPI: 5401ec193279744cd1d5738010223923296b8af5
+  ContentfulDeliveryAPI: 5f20fcf45c620a288a5aef941bb57acb14c3ca5c
+  ContentfulManagementAPI: dd47124ad3ee1a702e27b8001677b0efa8b70187
   ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
 
-PODFILE CHECKSUM: 11e7ce4c18d8b0bfdbe8d733b56cb7941382960e
+PODFILE CHECKSUM: 041e9e9b33ae16770603612aefd93f71e0bb89f2
 
-COCOAPODS: 1.0.0.beta.8
+COCOAPODS: 1.1.0.beta.1
