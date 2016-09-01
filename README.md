@@ -6,17 +6,24 @@ Xcode plugin for generating Core Data models from [Contentful][1] content models
 
 ## Installation
 
-Update Git submodules before building:
+**Step 1.** Update Git submodules:
 
 ```
 git submodule update --init --recursive
 ```
+**Step 2.** Update Pods:
+
+```
+pod update
+```
+**Step 3.** *Xcode > Product > Build*
+
 
 Building the "ContentfulPlugin" scheme will build and install the plugin.
 
 Alternatively, download a binary build from the "releases" section and place it into *$HOME/Library/Application Support/Developer/Shared/Xcode/Plug-ins*, then restart Xcode. 
 
-The plugin is compatible with Xcode 5.1.1 and all versions of Xcode 6, including {6.2,6.3} beta on OS X 10.9 and 10.10.
+The plugin is compatible with Xcode 7.3.1 on OS X 10.11.
 
 ## Usage
 
